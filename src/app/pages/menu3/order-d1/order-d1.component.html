@@ -1,0 +1,142 @@
+<!-- <app-navbar></app-navbar>
+
+<div class="header">
+  <div class="row">
+    <div class="col-sm"></div>
+    <h2 style="text-align: center;font-weight: bold">เบิกไปตัดเกรด</h2>
+    <div class="col-sm"></div>
+  </div>
+
+  <div class="row">
+    <div class="col-8">
+      <div class="form-inline">
+        <div class="input-group form-search" style="width: 350px">
+          <select class="form-control search-query" style="font-size: 21px" (change)="selectMenu(slt)" ngModel="1" #slt>
+            <option value="1">รหัสบาร์โค้ด</option>
+            <option value="2">รหัสบาร์โค้ด(2)</option>
+          </select>
+          <input type="text" class="form-control search-query" style="font-size: 21px;border-right: #4CAF50" id="myInput"
+            (keyup)="searchTable()" ngModel>
+          <div class="input-group-prepend">
+            <span class="input-group-text" style="border-radius: 0px 5px 5px 0px;background-color: #4CAF50;color: white">
+              <i class="fa fa-search"></i></span>
+          </div>
+        </div>
+        <label class="col-form-label mx-sm-4">ตำแหน่งห้องเก็บ</label>
+        <div class="col-ml-1">
+          <select class="form-control search-query" style="font-size: 21px" (change)="filterDd(fd)" ngModel="0" #fd>
+            <option value="0" selected>ทั้งหมด</option>
+            <option value="1">ห้อง 1</option>
+            <option value="2">ห้อง 2</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="col-4 text-right">
+      <h4><strong>จำนวนรายการทั้งหมด {{countList}} รายการ</strong></h4>
+    </div>
+  </div>
+
+  <div class="card shadow p">
+    <div class="card-header">
+      <h4 style="font-weight: bold"><i class="fa fa-table"></i>&nbsp;รายการเบิกไปตัดเกรด</h4>
+    </div>
+    <div class="card-body">
+      <div class="fixed-table-container">
+        <div class="header-background"></div>
+        <div class="fixed-table-container-inner">
+          <table id="tables">
+            <thead>
+              <tr>
+                <th style="width: 10%">
+                  <div class="th-inner" style="width: 10%">
+                    <input type="checkbox" (click)="checkAll_list(true)" id="checkAll">&nbsp;เลือกรายการ
+                  </div>
+                </th>
+                <th>
+                  <div class="th-inner">รายการ</div>
+                </th>
+                <th>
+                  <div class="th-inner">บาร์โค้ดซากซ้าย</div>
+                </th>
+                <th>
+                  <div class="th-inner">น้ำหนักซากซ้ายอุ่น(กก.)</div>
+                </th>
+                <th>
+                  <div class="th-inner">บาร์โค้ดซากขวา</div>
+                </th>
+                <th>
+                  <div class="th-inner">น้ำหนักซากขวาอุ่น(กก.)</div>
+                </th>
+                <th>
+                  <div class="th-inner">ตำแหน่งห้องเก็บ</div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="text-align: center">
+                  <input type="checkbox" name="chk" (click)="checkList()" [checked]="c.check">
+                </td>
+                <td>1</td>
+                <td>a</td>
+                <td>b</td>
+                <td>c</td>
+                <td>d</td>
+                <td>e</td>
+              </tr>
+              <tr>
+                <td style="text-align: center">
+                  <input type="checkbox" name="chk" (click)="checkList()" [checked]="c.check">
+                </td>
+                <td>2</td>
+                <td>a</td>
+                <td>b</td>
+                <td>c</td>
+                <td>d</td>
+                <td>e</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav_button">
+      <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-primary active">ดำเนินการต่อ <i
+          class="fa fa-angle-right"></i></button>
+    </div>
+  </div>
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4><b>กรอกรายละเอียดการเบิก</b></h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group row mx-sm-2">
+            <label>ชื่อผู้ทำการเบิก (ภาษาไทย)</label>
+            <input type="Id" class="form-control col-6 ml-auto" id="exampleInputId" maxlength="8">
+          </div>
+          <div class="form-group row mx-sm-2">
+            <label>วันที่เบิก</label>
+            <input type="date" class="form-control col-5 ml-auto" placeholder="กรอกวันที่..">
+            <div class="input-group-append">
+              <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+            </div>
+          </div>
+          <div class="form-group row mx-sm-2" style="font-size: 21px;font-weight: bold">
+            รวมทั้งหมดจำนวน 16 รายการ
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="fa fa-angle-left"></i> ยกเลิก</button>
+          <button type="button" class="btn btn-success">ส่ง <i class="fa fa-floppy-o"></i></button>
+        </div>
+      </div>
+    </div>
+  </div> -->

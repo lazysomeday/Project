@@ -1,0 +1,213 @@
+<app-navbar></app-navbar>
+
+<div class="header">
+  <p class="text-center"><strong>การแจ้งเตือน</strong></p>
+
+  <div class="row col r1">
+    <div class="t1 col-4">
+      <div class="card shadow p">
+        <div class="card-header">
+          <a><i class="material-icons">&#xe7f7;</i>&nbsp;ประเภทการแจ้งเตือน</a>
+        </div>
+        <div class="card-body c1">
+          <div class="row aa">
+            <button
+              type="button"
+              class="btn btn-primary"
+              id="active"
+              routerLink="/menu6/notification-t1"
+            >
+              วันใกล้หมดอายุ
+            </button>
+          </div>
+          <div class="row aa">
+            <button
+              type="button"
+              class="btn btn-primary"
+              routerLink="/menu6/notification-t2"
+            >
+              วันครบกำหนดบ่มซาก
+            </button>
+          </div>
+          <div class="row aa">
+            <button
+              type="button"
+              class="btn btn-primary"
+              routerLink="/menu6/notification-t3"
+            >
+              การนำเข้า
+            </button>
+          </div>
+          <div class="row aa">
+            <button
+              type="button"
+              class="btn btn-primary"
+              routerLink="/menu6/notification-t4"
+            >
+              การเบิกออก
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="t2 col-8">
+      <div class="card shadow p">
+        <div class="card-header">
+          <a
+            ><i style="font-size:24px" class="fa">&#xf273;</i
+            >&nbsp;&nbsp;วันใกล้หมดอายุ</a
+          >
+        </div>
+        <div class="card-body">
+          <table>
+            <thead>
+              <tr>
+                <th>ลำดับ</th>
+                <th>วันใกล้หมดอายุ</th>
+                <th>รายการ</th>
+                <th>จำนวน</th>
+                <th>รายละเอียด</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>01-11-2561</td>
+                <td>ก้อนเนื้อ-ทีโบน</td>
+                <td>4</td>
+                <td>
+                  <button
+                    class="btn btn-success"
+                    data-toggle="modal"
+                    data-target="#notifi"
+                  >
+                    <i class="far fa-file-alt"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>01-11-2561</td>
+                <td>ก้อนเนื้อ-สันใน</td>
+                <td>6</td>
+                <td>
+                  <button class="btn btn-success">
+                    <i class="far fa-file-alt"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>01-11-2561</td>
+                <td>ก้อนเนื้อ-สันนอก</td>
+                <td>6</td>
+                <td>
+                  <button class="btn btn-success">
+                    <i class="far fa-file-alt"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>08-11-2561</td>
+                <td>ซากเนื้อโค-ซีกซ้ายบน</td>
+                <td>4</td>
+                <td>
+                  <button class="btn btn-success">
+                    <i class="far fa-file-alt"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>8-11-2561</td>
+                <td>ซากเนื้อโค-ซีกขวาบน</td>
+                <td>4</td>
+                <td>
+                  <button class="btn btn-success">
+                    <i class="far fa-file-alt"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>08-11-2561</td>
+                <td>ซากเนื้อโค-ซีกซ้ายล่าง</td>
+                <td>2</td>
+                <td>
+                  <button class="btn btn-success">
+                    <i class="far fa-file-alt"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>08-11-2561</td>
+                <td>ซากเนื้อโค-ซีกขวาล่าง</td>
+                <td>2</td>
+                <td>
+                  <button class="btn btn-success">
+                    <i class="far fa-file-alt"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>15-11-2561</td>
+                <td>ก้อนเนื้อ-รักบี้</td>
+                <td>10</td>
+                <td>
+                  <button class="btn btn-success">
+                    <i class="far fa-file-alt"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>15-11-2561</td>
+                <td>ก้อนเนื้อ-ใบพาย</td>
+                <td>16</td>
+                <td>
+                  <button class="btn btn-success">
+                    <i class="far fa-file-alt"></i>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  class="modal fade"
+  id="notifi"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header"><b>รายละเอียดรายการ</b></div>
+      <div class="modal-body">
+        <table>
+          <thead>
+            <tr>
+              <th width="60px">ลำดับ</th>
+              <th width="60px">รหัสชิ้นเนื้อ</th>
+              <th width="60px">ประเภทชิ้นเนื้อ</th>
+              <th width="60px">รหัสบาร์โค้ดชิ้นเนื้อ</th>
+              <th width="60px">ห้องเก็บ</th>
+              <th width="60px">ชั้นเก็บ</th>
+              <th width="60px">ตะกร้า</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

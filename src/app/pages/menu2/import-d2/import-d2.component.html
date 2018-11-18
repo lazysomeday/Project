@@ -1,0 +1,129 @@
+<app-navbar></app-navbar>
+
+<div class="header">
+  <div class="row">
+    <div class="col-sm"></div>
+    <h2 style="text-align: center;font-weight: bold">การนำเข้าจากแผนกบ่ม</h2>
+    <div class="col-sm"></div>
+  </div>
+
+  <div class="row">
+    <div class="col-8">
+      <div class="form-inline">
+        <div class="input-group form-search" style="width: 350px">
+          <select class="form-control search-query" style="font-size: 21px" (change)="selectMenu(slt)" ngModel="1" #slt>
+            <option value="1">รหัสบาร์โค้ด</option>
+            <option value="2">รหัสบาร์โค้ด(2)</option>
+          </select>
+          <input type="text" class="form-control search-query" style="font-size: 21px;border-right: #4CAF50" id="myInput"
+            (keyup)="searchTable()" ngModel>
+          <div class="input-group-prepend">
+            <span class="input-group-text" style="border-radius: 0px 5px 5px 0px;background-color: #4CAF50;color: white">
+              <i class="fa fa-search"></i></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+
+  <div class="row form-inline justify-content-center">
+    <div class="input-group">
+      <label for="inputDate" class="col-form-label mx-sm-3">วันนำเข้า </label>
+      <input type="date" class="form-control" placeholder="กรอกวันที่..">
+      <div class="input-group-append">
+        <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+      </div>
+    </div>
+    <div class="input-group">
+      <label for="inputtoDate" class="col-form-label mx-sm-3"> ถึงวันที่ </label>
+      <input type="date" class="form-control" placeholder="กรอกวันที่..">
+      <div class="input-group-append">
+        <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary mx-sm-3 active" style="font-size: 21px;padding: 0.5rem 1rem;">ค้นหา <i
+        class="fa fa-search"></i></button>
+  </div>
+
+  <div class="card shadow p">
+    <div class="card-header">
+      <h4 style="font-weight: bold"><i class="fa fa-table"></i> รายการนำเข้าจากแผนกบ่ม</h4>
+    </div>
+    <div class="card-body">
+      <div class="fixed-table-container">
+        <div class="header-background"></div>
+        <div class="fixed-table-container-inner">
+          <table id="tables">
+            <thead>
+              <tr>
+                <th style="width: 5%">
+                  <div class="th-inner">รายการ</div>
+                </th>
+                <th style="width: 5%">
+                  <div class="th-inner">วันนำเข้า</div>
+                </th>
+                <th style="width: 5%">
+                  <div class="th-inner">เวลา</div>
+                </th>
+                <th style="width: 7%">
+                  <div class="th-inner">บาร์โค้ดซากซ้าย</div>
+                </th>
+                <th style="width: 10%">
+                  <div class="th-inner">น้ำหนักซากซ้ายอุ่น(กก.)</div>
+                </th>
+                <th style="width: 10%">
+                  <div class="th-inner">น้ำหนักซากซ้ายเย็น(กก.)</div>
+                </th>
+                <th style="width: 7%">
+                  <div class="th-inner">บาร์โค้ดซากขวา</div>
+                </th>
+                <th style="width: 10%">
+                  <div class="th-inner">น้ำหนักซากขวาอุ่น(กก.)</div>
+                </th>
+                <th style="width: 10%">
+                  <div class="th-inner">น้ำหนักซากขวาเย็น(กก.)</div>
+                </th>
+                <th style="width: 6%">
+                  <div class="th-inner">ระยะเวลาบ่ม(วัน)</div>
+                </th>
+                <th style="width: 6%">
+                  <div class="th-inner">ตำแหน่งห้องเก็บ</div>
+                </th>
+                <th style="width: 5%">
+                  <div class="th-inner">ชื่อผู้นำเข้า</div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>06/12/2560</td>
+                <td>23:59 น.</td>
+                <td>c</td>
+                <td>d</td>
+                <td>e</td>
+                <td>f</td>
+                <td>g</td>
+                <td>h</td>
+                <td>i</td>
+                <td>j</td>
+                <td>ทศวรรษ</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>a</td>
+                <td>b</td>
+                <td>c</td>
+                <td>d</td>
+                <td>e</td>
+                <td>f</td>
+                <td>g</td>
+                <td>h</td>
+                <td>i</td>
+                <td>j</td>
+                <td>k</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>

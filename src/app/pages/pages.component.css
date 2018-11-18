@@ -1,0 +1,152 @@
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.f{
+  background-color: aqua;
+  margin-left: 20%;
+  margin-right: 20%;
+  height: 470px;
+}
+
+.c1{
+  margin-top: 3%;
+
+  margin-left: 2%;
+  margin-right: 2%;
+
+}
+
+.c2{
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-bottom: 3%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 15px;
+  right: 0;
+  height: 100%;
+  width: 96.5%;
+  opacity: 0;
+  transition: .5s ease;
+}
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.t5 {
+  position: absolute;
+  top: 0;
+  left: 0%;
+  right: 0;
+  bottom: 0;
+  width: 157px;
+}
+.t6 {
+  position: absolute;
+  top: 0;
+  left: 157px;
+  right: 0;
+  bottom: 0;
+  width: 156px;
+}
+.t7 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 156px;
+}
+
+.t8 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 313px;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.data {
+  position: absolute;
+  font-size: 80px;
+  color: red;
+  left: 15%;
+}
+.data2 {
+  position: absolute;
+  font-size: 80px;
+  color: red;
+  left: 60%;
+}
+.data3 {
+  position: absolute;
+  font-size: 80px;
+  color: red;
+  top: 48%;
+  left: 40%;
+}
+.data4 {
+  position: absolute;
+  font-size: 80px;
+  color: red;
+  top: 48%;
+  left: 90%;
+}
+
+.tableFixHead {
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 260px;
+
+}
+
+.tableFixHead table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.tableFixHead td {
+  padding: 6px;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+}
+
+.tableFixHead td+td {
+  border-left: 1px solid #ccc;
+}
+
+.tableFixHead th {
+  position: sticky;
+  top: 0;
+  background-color: #D5ECFF;        /* เปลี่ยนสีหัวตาราง */
+  padding: 8px;                   /* ความสูงของหัวตาราง */
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+}
+
+.tableFixHead tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.tableFixHead tr:hover {
+  background-color: #ddd;
+}
+
+.dd {
+  border: 1px solid #ddd;
+}
+

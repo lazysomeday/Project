@@ -1,0 +1,289 @@
+<app-navbar></app-navbar>
+
+<div class="header">
+  <p class="text-center"><strong>นำเข้าจากแผนกตัดแต่ง</strong></p>
+
+  <div class="row">
+    <div class="form-inline">
+      <label class="col-form-label"><b> ประเภทการนำเข้</b>า</label>
+      <div class="dropdown mx-sm-4">
+        <button class="dropbtn">ชิ้นเนื้อโค&nbsp;<i class="fa fa-caret-down"></i></button>
+        <div class="dropdown-content" style="width: 150px">
+          <a routerLink="/menu2/d2-type2">ซากเนื้อโค (ก้อน)</a>
+          <a routerLink="/menu2/d2-type1">ซากเนื้อโค (บน-ล่าง)</a>
+        </div>
+      </div>
+
+      <div class="input-group mx-sm-3">
+        <label class="col-form-label mx-sm-3"><b> วันที่นำเข้า </b></label>
+        <input type="date" class="form-control" placeholder="กรอกวันที่.." />
+        <div class="input-group-append">
+          <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+        </div>
+      </div>
+      <div class="input-group">
+        <label class="col-form-label mx-sm-3"><b> ถึงวันที่ </b></label>
+        <input type="date" class="form-control" placeholder="กรอกวันที่.." />
+        <div class="input-group-append">
+          <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary mx-sm-3">
+        ค้นหา <i class="fa fa-search"></i>
+      </button>
+    </div>
+  </div>
+
+  <div class="card shadow p">
+    <div class="card-header">
+      <h5>
+        <i class="fa fa-table"></i> รายการนำเข้าจากแผนกตัดแต่งชิ้นเนื้อโค
+      </h5>
+    </div>
+    <div class="card-body">
+          <table id="tables">
+            <thead>
+              <tr>
+                <th width=70px>ลำดับ</th>
+                <th width=100px>วันที่นำเข้า</th>
+                <th width=80px>เวลา</th>
+                <th width=130px>รหัสชิ้นเนื้อ</th>
+                <th width=120px>ประเภทชิ้นเนื้อ</th>
+                <th width=130px>รหัสบาร์โค้ดชิ้นเนื้อ</th>
+                <th width=120px>น้ำหนักชิ้นเนื้อ(กก.)</th>
+                <th width=120px>สถานะ</th>
+                <th width=100px>เกรดชิ้นเนื้อ</th>
+                <th width=100px>ราคาชิ้นเนื้อ(บาท)</th>
+                <th>ชื่อผู้นำเข้า</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td width=70px>1</td>
+                <td width=100px>06-12-2560</td>
+                <td width=80px>23:59 น.</td>
+                <td width=130px>61-06-001-LT-B01</td>
+                <td width=120px>เนื้อน่อง</td>
+                <td width=130px>885123400111101</td>
+                <td width=120px>12.25</td>
+                <td width=120px>หลังตัดแต่งครั้งที่ 3</td>
+                <td width=100px>2.5</td>
+                <td width=100px>-</td>
+                <td>ทศวรรษ</td>
+              </tr>
+              <tr>
+                <td width=70px>2</td>
+                <td width=100px>06-12-2560</td>
+                <td width=80px>23:59 น.</td>
+                <td width=130px>61-06-001-LT-B02</td>
+                <td width=120px>เนื้อสะโพกนอก</td>
+                <td width=130px>885123400211102</td>
+                <td width=120px>13.34</td>
+                <td width=120px>หลังตัดแต่งครั้งที่ 3</td>
+                <td width=100px>2.0</td>
+                <td width=100px>-</td>
+                <td>ทศวรรษ</td>
+              </tr>
+              <tr>
+                <td width=70px>3</td>
+                <td width=100px>06-12-2560</td>
+                <td width=80px>23:59 น.</td>
+                <td width=130px>61-06-001-LT-B03</td>
+                <td width=120px>เนื้อลูกมะพร้าว</td>
+                <td width=130px>885123400311103</td>
+                <td width=120px>14.49</td>
+                <td width=120px>หลังตัดแต่งครั้งที่ 3</td>
+                <td width=100px>3.0</td>
+                <td width=100px>-</td>
+                <td>ทศวรรษ</td>
+              </tr>
+              <tr>
+                <td width=70px>4</td>
+                <td width=100px>06-12-2560</td>
+                <td width=80px>23:59 น.</td>
+                <td width=130px>61-06-001-LT-B04</td>
+                <td width=120px>เนื้อหางสะโพก</td>
+                <td width=130px>885123400411104</td>
+                <td width=120px>16.66</td>
+                <td width=120px>หลังตัดแต่งครั้งที่ 3</td>
+                <td width=100px>2.0</td>
+                <td width=100px>-</td>
+                <td>ทศวรรษ</td>
+              </tr>
+              <tr>
+                <td width=70px>5</td>
+                <td width=100px>06-12-2560</td>
+                <td width=80px>23:59 น.</td>
+                <td width=130px>61-06-001-LT-B05</td>
+                <td width=120px>เนื้อสันสะโพก</td>
+                <td width=130px>885123400511105</td>
+                <td width=120px>15.54</td>
+                <td width=120px>หลังตัดแต่งครั้งที่ 3</td>
+                <td width=100px>2.5</td>
+                <td width=100px>-</td>
+                <td>ทศวรรษ</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>06-12-2560</td>
+                <td>23:59 น.</td>
+                <td>61-06-001-LT-B06</td>
+                <td>เนื้อทีโบน</td>
+                <td>885123400611106</td>
+                <td>17.34</td>
+                <td>หลังตัดแต่งครั้งที่ 3</td>
+                <td>2.0</td>
+                <td>-</td>
+                <td>ทศวรรษ</td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>06-12-2560</td>
+                <td>23:59 น.</td>
+                <td>61-06-001-LT-B07</td>
+                <td>เนื้อสันนอก</td>
+                <td>885123400711107</td>
+                <td>13.13</td>
+                <td>หลังตัดแต่งครั้งที่ 3</td>
+                <td>3.0</td>
+                <td>-</td>
+                <td>ทศวรรษ</td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>06-12-2560</td>
+                <td>23:59 น.</td>
+                <td>61-06-001-LT-B08</td>
+                <td>เนื้อใบบัวสเต๊ก</td>
+                <td>885123400811108</td>
+                <td>18.71</td>
+                <td>หลังตัดแต่งครั้งที่ 3</td>
+                <td>3.5</td>
+                <td>-</td>
+                <td>ทศวรรษ</td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>06-12-2560</td>
+                <td>23:59 น.</td>
+                <td>61-06-001-LB-B09</td>
+                <td>เนื้อสะโพกใน</td>
+                <td>885123400912109</td>
+                <td>16.38</td>
+                <td>หลังตัดแต่งครั้งที่ 3</td>
+                <td>2.5</td>
+                <td>-</td>
+                <td>ทศวรรษ</td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td>06-12-2560</td>
+                <td>23:59 น.</td>
+                <td>61-06-001-LB-B10</td>
+                <td>เนื้อสันใน</td>
+                <td>885123401012110</td>
+                <td>10.26</td>
+                <td>หลังตัดแต่งครั้งที่ 3</td>
+                <td>3.0</td>
+                <td>-</td>
+                <td>ทศวรรษ</td>
+              </tr>
+              <tr>
+                <td>11</td>
+                <td>06-12-2560</td>
+                <td>23:59 น.</td>
+                <td>61-06-001-RT-B11</td>
+                <td>เนื้อสันกลางถอดกระดูก</td>
+                <td>885123401121111</td>
+                <td>18.13</td>
+                <td>หลังตัดแต่งครั้งที่ 3</td>
+                <td>2.5</td>
+                <td>-</td>
+                <td>ทศวรรษ</td>
+              </tr>
+              <tr>
+                <td>12</td>
+                <td>06-12-2560</td>
+                <td>23:59 น.</td>
+                <td>61-06-001-RT-B12</td>
+                <td>เนื้อซี่โครงติดกระดูก</td>
+                <td>885123401221112</td>
+                <td>13.64</td>
+                <td>หลังตัดแต่งครั้งที่ 3</td>
+                <td>3.0</td>
+                <td>-</td>
+                <td>ทศวรรษ</td>
+              </tr>
+              <tr>
+                <td>13</td>
+                <td>06-12-2560</td>
+                <td>23:59 น.</td>
+                <td>61-06-001-RT-B13</td>
+                <td>เนื้อสันกลางถอดกระดูก</td>
+                <td>885123401321113</td>
+                <td>17.25</td>
+                <td>หลังตัดแต่งครั้งที่ 3</td>
+                <td>2.0</td>
+                <td>-</td>
+                <td>ทศวรรษ</td>
+              </tr>
+              <tr>
+                <td>14</td>
+                <td>06-12-2560</td>
+                <td>23:59 น.</td>
+                <td>61-06-001-RT-B14</td>
+                <td>เนื้อใบพาย</td>
+                <td>885123401421114</td>
+                <td>15.98</td>
+                <td>หลังตัดแต่งครั้งที่ 3</td>
+                <td>2.5</td>
+                <td>-</td>
+                <td>ทศวรรษ</td>
+              </tr>
+              <tr>
+                <td>15</td>
+                <td>06-12-2560</td>
+                <td>23:59 น.</td>
+                <td>61-06-001-RT-B15</td>
+                <td>เนื้อเสือร้องไห้</td>
+                <td>885123401521115</td>
+                <td>13.55</td>
+                <td>หลังตัดแต่งครั้งที่ 3</td>
+                <td>2.0</td>
+                <td>-</td>
+                <td>ทศวรรษ</td>
+              </tr>
+              <tr>
+                <td>16</td>
+                <td>06-12-2560</td>
+                <td>23:59 น.</td>
+                <td>61-06-001-RT-B16</td>
+                <td>เนื้อรักบี้</td>
+                <td>885123401621116</td>
+                <td>12.14</td>
+                <td>หลังตัดแต่งครั้งที่ 3</td>
+                <td>2.5</td>
+                <td>-</td>
+                <td>ทศวรรษ</td>
+              </tr>
+              <tr>
+                <td>17</td>
+                <td>06-12-2560</td>
+                <td>23:59 น.</td>
+                <td>61-06-001-RB-B17</td>
+                <td>เนื้อสันไหล่</td>
+                <td>885123401722117</td>
+                <td>13.55</td>
+                <td>หลังตัดแต่งครั้งที่ 3</td>
+                <td>3.0</td>
+                <td>-</td>
+                <td>ทศวรรษ</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="text-right ml-auto">
+            <h5><strong>จำนวนรายการทั้งหมด 17 รายการ</strong></h5>
+          </div>
+        </div>
+      </div>
+    </div>

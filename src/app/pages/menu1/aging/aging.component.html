@@ -1,0 +1,123 @@
+<app-navbar></app-navbar>
+
+<div class="header">
+  <p class="text-center"><strong>บ่มซากเนื้อโค</strong></p>
+
+  <div class="row form-inline justify-content-center">
+      <div class="input-group">
+        <label class="col-form-label mx-sm-3"><b> วันที่ </b></label>
+        <input type="date" class="form-control" placeholder="กรอกวันที่..">
+        <div class="input-group-append">
+          <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+        </div>
+      </div>
+      <div class="input-group">
+        <label class="col-form-label mx-sm-3"><b> ถึงวันที่ </b></label>
+        <input type="date" class="form-control" placeholder="กรอกวันที่..">
+        <div class="input-group-append">
+          <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary mx-sm-3">ค้นหา <i class="fa fa-search"></i></button>
+    </div>
+
+  <div class="card shadow p">
+    <div class="card-header">
+      <h5><i class="fa fa-table"></i> รายการบ่มซากเนื้อโค (ซากอุ่น)</h5>
+    </div>
+    <div class="card-body">
+          <table id="tables">
+            <thead>
+              <tr>
+                <th width=120px>
+                  <input type="checkbox" (click)="checkAll_list()" id="checkAll">&nbsp;เลือกรายการ
+                </th>
+                <th width=80px>ลำดับ</th>
+                <th width=120px>วันที่นำเข้า</th>
+                <th width=120px>รหัสซากซ้าย</th>
+                <th width=120px>รหัสบาร์โค้ดซากซ้าย</th>
+                <th width=120px>น้ำหนักซากซ้าย(กก.)</th>
+                <th width=120px>รหัสซากขวา</th>
+                <th width=120px>รหัสบาร์โค้ดซากขวา</th>
+                <th>น้ำหนักซากขวา(กก.)</th>
+                <!-- <th>สถานะ</th> -->
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let d of data;let i = index">
+                <td style="text-align: center"  width=120px>
+                  <input type="checkbox" name="chk" (click)="selectMenu(d.key)" [checked]="c.check">
+                </td>
+                <td width=80px>{{i+1}}</td>
+                <td width=120px>{{d.date | date: "dd-MM-yyyy"}}</td>
+                <td width=120px>{{d.code1}}</td>
+                <td width=120px>{{d.barcode1}}</td>
+                <td width=120px>{{d.weight1}}</td>
+                <td width=120px>{{d.code2}}</td>
+                <td width=120px>{{d.barcode2}}</td>
+                <td>{{d.weight2}}</td>
+                <!-- <td>{{d.status}}</td> -->
+              </tr>
+            </tbody>
+          </table>
+      <div class="text-right ml-auto">
+        <h5><strong>จำนวนรายการทั้งหมด {{count}} รายการ</strong></h5>
+      </div>
+      <div class="nav_button">
+        <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-primary"
+        >ต่อไป 
+          <i class="fa fa-chevron-right"></i></button>
+      </div>
+    </div>
+    </div>
+
+    <!-- Popup ปุ่มบันทึกรายการ -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <b>รายละเอียดการบ่ม</b>
+          </div>
+          <div class="modal-body">
+            <div class="form-group row mx-sm-2">
+              <b>ชื่อผู้ทำการบ่ม</b>
+              <input id="sz" class="form-control col-6 ml-auto" placeholder="{{name}}" disabled>
+            </div>
+            <div class="form-group row mx-sm-2">
+              <b>วันที่และเวลาเริ่มบ่ม</b>
+              <input id="sz" class="form-control col-6 ml-auto" placeholder="{{date | date: 'dd-MM-yyyy เวลา HH:mm น.'}}"
+                disabled>
+            </div>
+            <div class="form-group row mx-sm-2">
+              <div class="input-group form-search mb-4">
+                <b>ระยะเวลาบ่ม</b>
+                <select class="form-control search-query col-6 ml-auto" ngModel="7" style="border-radius: 4px">
+                  <option value="1">1 วัน</option>
+                  <option value="2">2 วัน</option>
+                  <option value="3">3 วัน</option>
+                  <option value="4">4 วัน</option>
+                  <option value="5">5 วัน</option>
+                  <option value="6">6 วัน</option>
+                  <option value="7">7 วัน (มาตรฐาน)</option>
+                  <option value="8">8 วัน</option>
+                  <option value="9">9 วัน</option>
+                  <option value="10">10 วัน</option>
+                  <option value="11">11 วัน</option>
+                  <option value="12">12 วัน</option>
+                  <option value="13">13 วัน</option>
+                  <option value="14">14 วัน</option>
+                  <option value="15">15 วัน</option>
+                </select>
+              </div>
+              <label><b>จำนวนรายการบ่มทั้งหมด {{idcheck.length}} รายการ</b></label>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="fa fa-chevron-left"></i> กลับ</button>
+              <button type="button" class="btn btn-primary"
+              (click)="sw_alert()">ตกลง <i class="fa fa-check"></i></button> <!-- (click)="changeValue(false)" -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <button id="openModalButton" [hidden]="true" data-toggle="modal" data-target="#exampleModal">Open Modal</button>

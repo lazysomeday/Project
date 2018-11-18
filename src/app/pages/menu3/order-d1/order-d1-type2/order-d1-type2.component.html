@@ -1,0 +1,120 @@
+<app-navbar></app-navbar>
+
+<div class="header">
+  <p class="text-center"><strong>เบิกไปตัดแต่ง</strong></p>
+
+  <div class="row">
+    <div class="form-inline">
+      <label class="col-form-label"><b> ประเภทการเบิกออก</b></label>
+      <div class="dropdown mx-sm-4">
+        <button class="dropbtn">ซากเนื้อโค (บน-ล่าง)&nbsp;<i class="fa fa-caret-down"></i></button>
+        <div class="dropdown-content" style="width: 165px">
+          <a routerLink="/menu3/order-d1-type1">ซากเนื้อโค (ซ้าย-ขวา)</a>
+          <a routerLink="/menu3/order-d1-type3">ซากเนื้อโค (ก้อน)</a>
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label class="col-form-label mx-sm-3"><b> วันที่เบิกออก </b></label>
+        <input type="date" class="form-control" placeholder="กรอกวันที่.." />
+        <div class="input-group-append">
+          <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+        </div>
+      </div>
+      <div class="input-group">
+        <label class="col-form-label mx-sm-3"><b> ถึงวันที่ </b></label>
+        <input type="date" class="form-control" placeholder="กรอกวันที่.." />
+        <div class="input-group-append">
+          <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary mx-sm-3">
+        ค้นหา <i class="fa fa-search"></i>
+      </button>
+    </div>
+  </div>
+
+  <div class="card shadow p">
+    <div class="card-header">
+      <h5><i class="fa fa-table"></i> รายการเบิกไปตัดแต่งซากเนื้อโค (บน-ล่าง)</h5>
+    </div>
+    <div class="card-body">
+          <table id="tables">
+            <thead>
+              <tr>
+                <th>ลำดับ</th>
+                <th>วันที่เบิกออก</th>
+                <th>เวลา</th>
+                <th>รหัสซาก</th>
+                <th>ประเภทซาก</th>
+                <th>รหัสบาร์โค้ดซาก</th>
+                <th>น้ำหนักซาก(กก.)</th>
+                <th>สถานะ</th>
+                <th>เกรดซาก</th>
+                <th>ราคาซาก(บาท)</th>
+                <th>ชื่อผู้นำเข้า</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>06-12-2560</td>
+                <td>23:59 น.</td>
+                <td>61-06-001-LT</td>
+                <td>ซากซ้ายบน</td>
+                <td>885123400111000</td>
+                <td>130.25</td>
+                <td>หลังตัดแต่งครั้ง 1</td>
+                <td>-</td>
+                <td>-</td>
+                <td>ทศวรรษ</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>06-12-2560</td>
+                <td>23:59 น.</td>
+                <td>61-06-001-LB</td>
+                <td>ซากซ้ายล่าง</td>
+                <td>885123400112000</td>
+                <td>132.54</td>
+                <td>หลังตัดแต่งครั้ง 1</td>
+                <td>-</td>
+                <td>-</td>
+                <td>ทศวรรษ</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>06-12-2560</td>
+                <td>23:59 น.</td>
+                <td>61-06-001-RT</td>
+                <td>ซากขวาบน</td>
+                <td>885123400121000</td>
+                <td>134.18</td>
+                <td>หลังตัดแต่งครั้ง 1</td>
+                <td>-</td>
+                <td>-</td>
+                <td>ทศวรรษ</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>06-12-2560</td>
+                <td>23:59 น.</td>
+                <td>61-06-001-RB</td>
+                <td>ซากขวาล่าง</td>
+                <td>885123400122000</td>
+                <td>131.86</td>
+                <td>หลังตัดแต่งครั้ง 1</td>
+                <td>-</td>
+                <td>-</td>
+                <td>ทศวรรษ</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="text-right ml-auto">
+            <h5><strong>จำนวนรายการทั้งหมด 4 รายการ</strong></h5>
+          </div>
+        </div>
+      </div>
+    </div>
+
+

@@ -1,0 +1,140 @@
+<app-navbar></app-navbar>
+
+<div class="header">
+  <p class="text-center"><strong>เบิกไปจำหน่าย</strong></p>
+
+  <div class="row">
+    <div class="form-inline">
+      <label class="col-form-label"><b> ประเภทการเบิกออก</b></label>
+      <div class="dropdown mx-sm-4">
+        <button class="dropbtn">ซากเนื้อโค (ซ้าย-ขวา)&nbsp;<i class="fa fa-caret-down"></i></button>
+        <div class="dropdown-content" style="width: 170px">
+          <a routerLink="/menu3/order-d2-type2">ซากเนื้อโค (บน-ล่าง)</a>
+          <a routerLink="/menu3/order-d2-type3">ซากเนื้อโค (ก้อน)</a>
+          <a routerLink="/menu3/order-d2-type4">ชิ้นส่วนโค</a>
+          <!-- <a routerLink="/menu3/order-d2-type2">ชิ้นเนื้อโค</a>
+          <a routerLink="/menu3/order-d2-type3">ชิ้นส่วนโค</a> -->
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label class="col-form-label mx-sm-3"><b> วันที่เบิกออก </b></label>
+        <input type="date" class="form-control" placeholder="กรอกวันที่.." />
+        <div class="input-group-append">
+          <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+        </div>
+      </div>
+      <div class="input-group">
+        <label class="col-form-label mx-sm-3"><b> ถึงวันที่ </b></label>
+        <input type="date" class="form-control" placeholder="กรอกวันที่.." />
+        <div class="input-group-append">
+          <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary mx-sm-3">
+        ค้นหา <i class="fa fa-search"></i>
+      </button>
+    </div>
+  </div>
+
+  <div class="card shadow p">
+    <div class="card-header">
+      <h5><i class="fa fa-table"></i> รายการเบิกไปจำหน่ายซากเนื้อโค (ซ้าย-ขวา)</h5>
+    </div>
+    <div class="card-body">
+          <table id="tables">
+            <thead>
+              <tr>
+                <th>ลำดับ</th>
+                <th>วันที่เบิกออก</th>
+                <th>เวลา</th>
+                <th>รหัสซาก</th>
+                <th>ประเภทซาก</th>
+                <th>รหัสบาร์โค้ดซาก</th>
+                <th>น้ำหนักอุ่น(กก.)</th>
+                <th>สถานะ</th>
+                <th>เกรดซาก</th>
+                <th>จำนวนซาก</th>
+                <th>ราคาซาก(บาท)</th>
+                <th>ชื่อผู้นำเข้า</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>06-12-2018</td>
+                <td>23:59 น.</td>
+                <td>61-06-001-L</td>
+                <td>ซากซ้าย</td>
+                <td>885123400110000</td>
+                <td>521.64</td>
+                <td>หลังตัดเกรด</td>
+                <td>2.0</td>
+                <td>1</td>
+                <td>8,250.00</td>
+                <td>ทศวรรษ</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>06-12-2018</td>
+                <td>23:59 น.</td>
+                <td>61-06-002-L</td>
+                <td>ซากซ้าย</td>
+                <td>885123400210000</td>
+                <td>518.92</td>
+                <td>หลังตัดเกรด</td>
+                <td>3.0</td>
+                <td>1</td>
+                <td>8,375.00</td>
+                <td>ทศวรรษ</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>06-12-2018</td>
+                <td>23:59 น.</td>
+                <td>61-06-002-L</td>
+                <td>ซากซ้าย</td>
+                <td>885123400310000</td>
+                <td>522.52</td>
+                <td>หลังตัดเกรด</td>
+                <td>2.5</td>
+                <td>1</td>
+                <td>8,170.00</td>
+                <td>ทศวรรษ</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>06-12-2018</td>
+                <td>23:59 น.</td>
+                <td>61-06-004-R</td>
+                <td>ซากขวา</td>
+                <td>885123400420000</td>
+                <td>523.85</td>
+                <td>หลังตัดเกรด</td>
+                <td>2.0</td>
+                <td>1</td>
+                <td>7,825.00</td>
+                <td>ทศวรรษ</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>06-12-2018</td>
+                <td>23:59 น.</td>
+                <td>61-06-005-R</td>
+                <td>ซากขวา</td>
+                <td>885123400520000</td>
+                <td>517.14</td>
+                <td>หลังตัดเกรด</td>
+                <td>2.5</td>
+                <td>1</td>
+                <td>8,075.00</td>
+                <td>ทศวรรษ</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="text-right ml-auto">
+            <h5><strong>จำนวนรายการทั้งหมด 5 รายการ</strong></h5>
+          </div>
+        </div>
+      </div>
+    </div>

@@ -1,0 +1,140 @@
+/*overflow: hidden;
+border-radius: 25px 25px 0px 0px;*/
+
+.card{
+  margin-left: 15%;
+  margin-right: 15%;
+  overflow: hidden;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.card-header{
+  background-color: #006dcc;
+  color: white;
+  padding: 0.5rem 2rem;
+}
+
+.row{
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+td {
+  border-bottom: 1px solid #ccc;
+  padding: 8px;
+  text-align: left; /* IE */
+  font-size: 20px;
+}
+td + td {
+  border-left: 1px solid #ccc;
+}
+
+th {
+  padding: 0 5px;
+  text-align: left; /* IE */
+  font-size: 21px;
+}
+.header-background {
+  border-bottom: 1px solid #ccc;
+}
+.fixed-table-container {
+  width: 100%;
+  height: 275px;  /* เพิ่มความสูงตาราง */
+  border: 1px solid #ccc;
+  margin: 10px auto;
+  background-color: white;
+  /* above is decorative or flexible */
+  position: relative; /* could be absolute or relative */
+  padding-top: 50px; /* height of header */
+}
+.fixed-table-container-inner {
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 100%;
+}
+.header-background {
+  background-color: #D5ECFF;
+  height: 50px; /* height of header */
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+table {
+  background-color: white;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.th-inner {
+  position: absolute;
+  top: 0;
+  line-height: 50px; /* height of header */
+  text-align: left;
+  border-left: 1px solid #ccc;
+  padding-left: 8px;
+  margin-left: -5px;
+}
+.fixed-table-container tr:nth-child(even){background-color: #f2f2f2;}
+
+.fixed-table-container tr:hover {background-color: #ddd;}
+
+.btn-dafault{
+  background-color: #4CAF50;
+  color: white;
+}
+
+hr {
+  display: block;
+  unicode-bidi: isolate;
+  -webkit-margin-before: 0.5em;
+  -webkit-margin-after: 2em;
+  -webkit-margin-start: auto;
+  -webkit-margin-end: auto;
+  overflow: hidden;
+  border-style: inset;
+  border-width: 1px;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+tr th input{    /* checkbox หัวตาราง */
+  width: 20%;
+  transform: scale(1.5);
+}
+
+tr td input{
+  width: 100%;
+  transform: scale(1.5);
+  padding: 10px;
+}
+
+.nav_button{
+  text-align: center;
+  margin-top: 30px;
+}
+
+.nav_button button{
+  font-size: 21px;
+}
+
+.modal-footer button{
+  font-size: 21px;
+}
+
+label{        /* ตัวหนังสือใน modal */
+  font-size: 21px;
+  font-weight: bold;
+}
+
+.form-group input{
+  font-size: 21px;
+}
+
+h2
+{
+  margin-top: 20px;
+  margin-bottom: 30px;
+}

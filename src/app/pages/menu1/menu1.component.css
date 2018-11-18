@@ -1,0 +1,103 @@
+/*overflow: hidden;
+border-radius: 25px 25px 0px 0px;*/
+
+.card{
+  margin-left: 15%;
+  margin-right: 15%;
+  overflow: hidden;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.card-header{
+  background-color: #006dcc;
+  color: white;
+  padding: 0.5rem 2rem;
+}
+
+.row{
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+#tables {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#tables tr th {         /* หัวตาราง */
+  color: black;
+  font-size: 21px;
+  text-align: center;
+}
+
+#tables td, #tables th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  font-size: 21px;
+}
+
+#tables tr:nth-child(even){background-color: #f2f2f2;}
+
+#tables tr:hover {background-color: #ddd;}
+
+#tables th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: white;
+  color: black;
+}
+
+.btn-dafault{
+  background-color: #4CAF50;
+  color: white;
+}
+
+hr {
+  display: block;
+  unicode-bidi: isolate;
+  -webkit-margin-before: 0.5em;
+  -webkit-margin-after: 2em;
+  -webkit-margin-start: auto;
+  -webkit-margin-end: auto;
+  overflow: hidden;
+  border-style: inset;
+  border-width: 1.5px;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+tr th input{    /* checkbox หัวตาราง */
+  width: 20%;
+  transform: scale(1.5);
+}
+
+tr td input{
+  width: 100%;
+  transform: scale(1.5);
+  padding: 10px;
+}
+
+.nav_button{
+  text-align: center;
+  margin-top: 30px;
+}
+
+.nav_button button{
+  font-size: 21px;
+}
+
+.modal-footer button{
+  font-size: 21px;
+}
+
+label{        /* ตัวหนังสือใน modal */
+  font-size: 21px;
+  font-weight: bold;
+}
+
+.form-group input{
+  font-size: 21px;
+}

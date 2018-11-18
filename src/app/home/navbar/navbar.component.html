@@ -1,0 +1,104 @@
+<!-- ก่อน login -->
+<nav class="navbar navbar-expand-xl navbar-dark fixed-top" style="background-color: #003171;" *ngIf="!isLogin">
+  <a><img class="navbar-icon" src="/assets/1.png"></a>
+  <div class="navbar-brand"><a routerLink="/home" class="head">ระบบคลังชิ้นเนื้อ</a></div>
+  <div class="collapse navbar-collapse inline-block">
+    <div class="navbar-expand-ml navbar-nav ml-auto">
+        <ul class="navbar-nav">
+          <li>
+            <a class="nav-item" [routerLink]="['/login']"
+            routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+              <i class='fas fa-sign-in-alt'></i> เข้าสู่ระบบ
+            </a>
+          </li>
+          <li>
+            <a class="nav-item" [routerLink]="['/register']"
+            routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+              <i class='fas fa-user-plus'></i> สมัครสมาชิก
+            </a>
+          </li>
+        </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- หน้าหลัก -->
+<nav class="navbar navbar-expand-xl navbar-dark fixed-top " *ngIf="isLogin">
+  <a><img class="navbar-icon" src="/assets/1.png"></a>
+  <div class="navbar-brand"><a routerLink="/dashboard" class="head">ระบบคลังชิ้นเนื้อ</a></div>
+
+  <div class="collapse navbar-collapse">
+    <ul class="navbar-nav mr-auto">
+      <div class="dropdown">
+        <button class="dropbtn" routerLink="/menu1" routerLinkActive="active"><i class="fas fa-thermometer-half"></i> การบ่มเนื้อ <i class="fa fa-caret-down"></i></button>
+        <div class="dropdown-content" style="width: 160px">
+          <a routerLink="/menu1/aging">บ่มซากเนื้อโค</a>
+          <a routerLink="/menu1/set-weight">จัดการข้อมูลการบ่ม</a> <!--  กำหนดน้ำหนักซากเนื้อโค -->
+          <!-- <a>ประวัติการบ่ม</a> -->
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <button class="dropbtn" routerLink="/menu2" routerLinkActive="active"><i class='fas fa-file-import'></i> การนำเข้า <i class="fa fa-caret-down"></i></button>
+        <div class="dropdown-content" style="width: 125px">
+          <a routerLink="/menu2/d1-type1">นำเข้าจากเชือด</a>
+          <a routerLink="/menu2/d2-type1">นำเข้าจากตัดแต่ง</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <button class="dropbtn" routerLink="/menu3" routerLinkActive="active"><i class='fas fa-file-export'></i> การเบิกออก <i class="fa fa-caret-down"></i></button>
+        <div class="dropdown-content" style="width: 125px">
+          <a routerLink="/menu3/order-d1-type1">เบิกไปตัดแต่ง</a>
+          <a routerLink="/menu3/order-d2-type1">เบิกไปจำหน่าย</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <button class="dropbtn" routerLink="/menu4" routerLinkActive="active"><i class='fas fa-home'></i> คลัง <i class="fa fa-caret-down"></i></button>
+        <div class="dropdown-content" style="width: 100px">
+          <a routerLink="/menu4/store-t1">ยอดคงคลัง</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <button class="dropbtn"><i class='fas fa-file-pdf'></i> ออกรายงาน <i class="fa fa-caret-down"></i></button>
+        <div class="dropdown-content" style="width: 160px">
+          <a routerLink="/report1-d1">ออกรายงานนำเข้า</a>
+          <a routerLink="/report2-d1">ออกรายงานเบิกออก</a>
+          <a routerLink="/report3">ออกรายงานคงคลัง</a>
+          <a routerLink="/report4">ออกรายงานการบ่มเนื้อ</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <button class="dropbtn" routerLink="/menu6" routerLinkActive="active"><i class="fas fa-exclamation-triangle"></i> การแจ้งเตือน <i class="fa fa-caret-down"></i></button>
+        <div class="dropdown-content" style="width: 130px">
+          <a routerLink="/menu6/notification-t1">การแจ้งเตือน</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <button class="dropbtn"><i class="fas fa-cogs"></i> ตั้งค่า <i class="fa fa-caret-down"></i></button>
+        <div class="dropdown-content" style="width: 135px">
+          <a>ตั้งค่าการแจ้งเตือน</a>
+          <a>ตั้งค่าคลังชิ้นเนื้อ</a>
+        </div>
+      </div>
+    </ul>
+
+    <div class="navbar-expand-ml navbar-nav">
+      <div class="navbar-expand-ml navbar-nav">
+        <div class="dropdown">
+          <button class="dropbtn" routerLink="/setting" routerLinkActive="active"><i class="fas fa-user"></i> คุณ {{user}} <i
+              class="fa fa-caret-down"></i></button>
+          <div class="dropdown-content" style="width: 160px">
+            <a routerLink="/setting/edit-profile"><i class="fas fa-edit"></i> แก้ไขบัญชี</a>
+            <a routerLink="/setting" [hidden]="privilege_id=='2'"><i class="fas fa-user-cog"></i> ตั้งค่าระบบ</a>
+            <a routerLink="/home" (click)="logout()"><i class="fas fa-sign-out-alt"></i> ออกจากระบบ</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

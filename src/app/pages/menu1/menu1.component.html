@@ -1,0 +1,137 @@
+<app-aging></app-aging>
+<!--<app-navbar></app-navbar>
+<div class="header">
+  <h2 style="text-align: center;font-weight: bold">บ่มซากเนื้อโค</h2>
+
+  <div class="row">
+    <div class="form-inline ml-auto">
+        <div class="col-sm-2">
+          <select class="form-control search-query" style="font-size: 20px" required>
+              <option selected>ตำแหน่งห้องเก็บ 1</option>
+              <option>ตำแหน่งห้องเก็บ 2</option>
+              <option>ตำแหน่งห้องเก็บ 3</option>
+          </select>
+        </div>
+          <div class="input-group form-search ml-auto" style="width: 350px">
+            <select class="form-control search-query" style="border-radius: 10px 0px 0px 10px;font-size: 20px">
+              <option value="1">บาร์โค้ดซาก</option>
+            </select>
+            <input type="text" class="form-control search-query" style="font-size: 20px">
+            <div class="input-group-append">
+              <button type="submit" class="btn btn-dafault"><i class="fa fa-search"></i></button>
+            </div>
+          </div>
+          </div>
+  </div>
+  <hr>
+
+  <div class="card shadow p">
+      <div class="card-header">
+        <h4 style="font-weight: bold"><i class="fa fa-table"></i> รายการบ่มซากเนื้อโค</h4>
+      </div>
+      <div class="card-body">
+
+<table id="tables">
+  <tr>
+    <th style="width: 12%;text-align: left"><input type="checkbox" name="all_list"> เลือกรายการ</th>
+    <th>รายการ</th>
+    <th>บาร์โค้ดซากซ้าย</th>
+    <th>น้ำหนักซากซ้ายอุ่น (กก.)</th>
+    <th>บาร์โค้ดซากขวา</th>
+    <th>น้ำหนักซากขวาอุ่น (กก.)</th>
+    <th>ตำแหน่งห้องเก็บ</th>
+  </tr>
+  <tr>
+    <td><input type="checkbox" name="list1"></td>
+    <td>1</td>
+    <td>a</td>
+    <td>b</td>
+    <td>c</td>
+    <td>d</td>
+    <td>e</td>
+  </tr>
+  <tr>
+    <td><input type="checkbox" name="list2"></td>
+    <td>2</td>
+    <td>a</td>
+    <td>b</td>
+    <td>c</td>
+    <td>d</td>
+    <td>e</td>
+  </tr>
+</table>
+
+<div class="mb-3"></div>
+    <ul class="pagination justify-content-end">
+      <li class="page-item disabled">
+          <li class="page-item"><a class="page-link">&laquo;</a></li>
+          <li class="page-item active"><a class="page-link">1</a></li>
+          <li class="page-item"><a class="page-link">2</a></li>
+          <li class="page-item"><a class="page-link">3</a></li>
+          <li class="page-item"><a class="page-link">4</a></li>
+          <li class="page-item"><a class="page-link">&raquo;</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="nav_button">
+    <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-primary active">ดำเนินการต่อ</button>
+</div>
+</div>-->
+  <!-- Popup ปุ่มบันทึกรายการ
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group row mx-sm-2">
+            <label>ชื่อผู้ดำเนินการ (ภาษาไทย)</label>
+            <input type="Id" class="form-control col-6 ml-auto" id="exampleInputId" maxlength="8">
+          </div>
+          <div class="form-group row mx-sm-2">
+              <label>วันที่บ่ม</label>
+              <input type="date" class="form-control col-5 ml-auto" placeholder="กรอกวันที่..">
+                <div class="input-group-append">
+                  <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                </div>
+          </div>
+          <div class="form-group row mx-sm-2">
+          <label for="inputDate">ระยะเวลาบ่ม</label>
+          <select class="form-control col-6 ml-auto" style="font-size: 20px" required>
+              <option selected>เลือกระยะเวลาบ่ม..</option>
+              <option>1 วัน</option>
+              <option>2 วัน</option>
+              <option>3 วัน</option>
+              <option>4 วัน</option>
+              <option>5 วัน</option>
+              <option>6 วัน</option>
+              <option>7 วัน</option>
+              <option>8 วัน</option>
+              <option>9 วัน</option>
+              <option>10 วัน</option>
+              <option>11 วัน</option>
+              <option>12 วัน</option>
+              <option>13 วัน</option>
+              <option>14 วัน</option>
+              <option>15 วัน</option>
+          </select>
+          </div>
+          <div class="form-group row mx-sm-2" style="font-size: 21px;font-weight: bold">
+            ห้องเก็บ 1 จำนวน 7 รายการ<br>
+            ห้องเก็บ 2 จำนวน 9 รายการ<br><br>
+            รวมทั้งหมด 16 รายการ
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="fa fa-angle-left"></i> ยกเลิก</button>
+          <button type="button" class="btn btn-success">ตกลง <i class="fa fa-floppy-o"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<app-footer></app-footer>-->

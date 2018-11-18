@@ -1,0 +1,86 @@
+<app-navbar></app-navbar>
+
+<div class="header">
+  <p class="text-center"><strong>จำลองการเพิ่มข้อมูล (แผนกเชือด)</strong></p>
+
+  <div class="row m">
+    <div class="col-sm-3">
+      <div class="card jumsize2 shadow p">
+        <div class="card-header">
+          <h5>ประเภทแผนก</h5>
+        </div>
+        <div class="card-body">
+          <div class="row a">
+            <button type="button" class="btn btn-primary" routerLink="/department1">แผนกเชือด</button>
+          </div>
+          <div class="row a">
+            <button type="button" class="btn btn-success" routerLink="/department2">แผนกตัดแต่ง</button>
+          </div>
+          <div class="row a">
+            <button type="button" class="btn btn-danger" routerLink="/department3">แผนกจำหน่าย</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card shadow p">
+        <div class="card-header">
+          <h5>ตัวเลือก</h5>
+        </div>
+        <div class="card-body">
+            <form (ngSubmit)="addDp1(dataForm)" #dataForm="ngForm">
+              <h5 id="r">เพิ่มข้อมูลซากเนื้อโค</h5>
+              <hr>
+              <div class="form-row">
+                <div class="col-sm-2 mb-2">
+                  <label>รหัสซากซ้าย</label>
+                  <input type="text" class="form-control" name="code1" ngModel>
+                </div>
+                <div class="col-sm-2 mb-2">
+                  <label>ประเภทซาก</label>
+                  <input type="text" class="form-control" name="type" ngModel>
+                </div>
+                <div class="col-sm-2 mb-2">
+                  <label>รหัสบาร์โค้ด</label>
+                  <input type="text" class="form-control" name="barcode1" ngModel>
+                </div>
+                <div class="col-sm-1 mb-2">
+                  <label>น้ำหนัก (กก.)</label>
+                  <input type="text" class="form-control" name="weight1" ngModel>
+                </div>
+                <div class="col-sm-2 mb-2">
+                  <label>รหัสซากขวา</label>
+                  <input type="text" class="form-control" name="code2" ngModel>
+                </div>
+                <div class="col-sm-2 mb-2">
+                  <label>รหัสบาร์โค้ด</label>
+                  <input type="text" class="form-control" name="barcode2" ngModel>
+                </div>
+                <div class="col-sm-1 mb-2">
+                  <label>น้ำหนัก (กก.)</label>
+                  <input type="text" class="form-control" name="weight2" ngModel>
+                </div>
+                <div class="col-sm-1 mb-2">
+                  <label>ตำแหน่ง</label>
+                  <input type="text" class="form-control" name="room" ngModel>
+                </div>
+                <div class="col-sm-1 mb-2">
+                  <label>ชื่อผู้นำเข้า</label>
+                  <input type="text" class="form-control" name="name_import" ngModel>
+                </div>
+                <div class="col-sm-1 mb-2" hidden>
+                  <label>สถานะ</label>
+                  <input type="text" class="form-control" name="status" ngModel="พร้อมบ่ม">
+                </div>
+                <div class="col-sm-1 mb-2" hidden>
+                  <label hidden>วันที่เพิ่มข้อมูล</label>
+                  <input type="text" class="form-control" name="date" ngModel="{{date}}">
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary">เพิ่มข้อมูล</button>
+              </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+.background {
+  background: url("/assets/home.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  position: relative;
+  min-height: 38rem;
+  padding: 0rem 0;
+}

@@ -1,0 +1,215 @@
+<app-navbar></app-navbar>
+
+<div class="header">
+    <p class="text-center"><strong>ชิ้นเนื้อคงคลัง</strong></p>
+    <div class="row">
+        <div class="form-inline" style="margin-left: 14px">
+          <label class="col-form-label"><b> ชนิดซาก/ชิ้นเนื้อ</b></label>
+          <div class="dropdown mx-sm-3">
+            <button class="dropbtn">
+              ชิ้นเนื้อโค <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content" style="width: 155px">
+              <a routerLink="/menu4/store-t1">ซากเนื้อโค (ซ้าย-ขวา)</a>
+              <a routerLink="/menu4/store-t2">ซากเนื้อโค (บน-ล่าง)</a>
+              <a routerLink="/menu4/store-t3">ซากเนื้อโค (ก้อน)</a>
+            </div>
+          </div>
+
+          <label class="col-form-label"><b>ค้นหาโดย</b></label>
+          <div class="input-group form-search mx-sm-4">
+            <select class="form-control search-query" (change)="selectMenu(slt)" ngModel="1" #slt>
+              <option value="1">รหัสบาร์โค้ดซาก</option>
+            </select>
+            <input type="text" class="form-control search-query" id="myInput"
+              (keyup)="searchTable()" ngModel style="height: 30px"/>
+            <div class="input-group-prepend">
+              <span class="input-group-text"> <i class="fa fa-search"></i></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+          <label class="col-form-label mx-sm-3"><b>ประเภทซาก</b></label>
+          <div class="form-inline col-sm-2">
+            <div class="input-group form-search ml-auto">
+              <select class="form-control search-query">  <!-- (change)="filter_1(t1)" ngModel="ทั้งหมด" #t1 -->
+                <option value="ทั้งหมด">ทั้งหมด</option>
+                <option value="ทั้งหมด">ทั้งหมด</option>
+                <option value="เนื้อน่อง">เนื้อน่อง</option>
+                <option value="เนื้อสะโพกนอก">เนื้อสะโพกนอก</option>
+                <option value="เนื้อลูกมะพร้าว">เนื้อลูกมะพร้าว</option>
+                <option value="เนื้อหางสะโพก">เนื้อหางสะโพก</option>
+                <option value="เนื้อสันสะโพก">เนื้อสันสะโพก</option>
+                <option value="เนื้อทีโบน">เนื้อทีโบน</option>
+                <option value="เนื้อสันนอก">เนื้อสันนอก</option>
+                <option value="เนื้อใบบัวสเต๊ก">เนื้อใบบัวสเต๊ก</option>
+                <option value="เนื้อสะโพกใน">เนื้อสะโพกใน</option>
+                <option value="เนื้อสันใน">เนื้อสันใน</option>
+                <option value="เนื้อสันกลางถอดกระดูก">เนื้อสันกลางถอดกระดูก</option>
+                <option value="เนื้อซี่โครงติดกระดูก">เนื้อซี่โครงติดกระดูก</option>
+                <option value="เนื้อสันกลางถอดกระดูก">เนื้อสันกลางถอดกระดูก</option>
+                <option value="เนื้อใบพาย">เนื้อใบพาย</option>
+                <option value="เนื้อเสือร้องไห้">เนื้อเสือร้องไห้</option>
+                <option value="เนื้อรักบี้">เนื้อรักบี้</option>
+                <option value="เนื้อสันไหล่">เนื้อสันไหล่</option>
+              </select>
+            </div>
+          </div>
+          <label class="col-form-label mx-sm-2"><b>อายุ (วัน)</b></label>
+          <div class="form-inline col-sm-2">
+            <div class="input-group form-search ml-auto">
+              <select class="form-control search-query"> <!-- (change)="filter_2(t2)" ngModel="ทั้งหมด" #t2 -->
+                <option value="ทั้งหมด">ทั้งหมด</option>
+                <option value="1 วัน">1 วัน</option>
+                <option value="2 วัน">2 วัน</option>
+                <option value="3 วัน">3 วัน</option>
+                <option value="4 วัน">4 วัน</option>
+                <option value="5 วัน">5 วัน</option>
+                <option value="6 วัน">6 วัน</option>
+                <option value="7 วัน">7 วัน</option>
+                <option value="8 วัน">8 วัน</option>
+                <option value="9 วัน">9 วัน</option>
+                <option value="10 วัน">10 วัน</option>
+                <option value="11 วัน">11 วัน</option>
+                <option value="12 วัน">12 วัน</option>
+                <option value="13 วัน">13 วัน</option>
+                <option value="14 วัน">14 วัน</option>
+                <option value="15 วัน">15 วัน</option>
+              </select>
+            </div>
+          </div>
+          <label class="col-form-label mx-sm-2"><b>สถานะ</b></label>
+          <div class="form-inline col-sm-2">
+            <div class="input-group form-search ml-auto">
+              <select class="form-control search-query"> <!-- (change)="filter_3(t3)" ngModel="ทั้งหมด" #t3 -->
+                <option value="ทั้งหมด">ทั้งหมด</option>
+                <option value="เบิกไปจำหน่าย">เบิกไปจำหน่าย</option>
+              </select>
+            </div>
+          </div>
+          <label class="col-form-label mx-sm-2"><b>ระดับเกรด</b></label>
+          <div class="form-inline col-sm-2">
+            <div class="input-group form-search ml-auto">
+              <select class="form-control search-query"> <!-- (change)="filter_4(t4)" ngModel="ทั้งหมด" #t4 -->
+                <option value="ทั้งหมด">ทั้งหมด</option>
+                <option value="-">-</option>
+                <option value="2.0">2.0</option>
+                <option value="2.5">2.5</option>
+                <option value="3.0">3.0</option>
+                <option value="3.25">3.25</option>
+                <option value="3.5">3.5</option>
+                <option value="4.0">4.0</option>
+                <option value="4.5">4.5</option>
+                <option value="5.0">5.0</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+<div class="card shadow p" id="aa">
+  <div class="card-header">
+    <h5><i class="fa fa-table"></i> รายการชิ้นเนื้อคงคลังชิ้นเนื้อโค</h5>
+  </div>
+    <div class="card-body">
+          <table id="tables">
+            <thead>
+              <tr>
+                <th>ลำดับ</th>
+                <th>รหัสชิ้นเนื้อ</th>
+                <th>ประเภทชิ้นเนื้อ</th>
+                <th>รหัสบาร์โค้ดชิ้นเนื้อ</th>
+                <th>(กก.)</th>
+                <th>(วัน)</th>
+                <th>สถานะ</th>
+                <th>เกรด</th>
+                <th>ราคา(บาท)</th>
+                <th>ตัวเลือก</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>61-06-001-LT-B01</td>
+                <td>เนื้อน่อง</td>
+                <td>885123400111101</td>
+                <td>12.25</td>
+                <td>7 วัน</td>
+                <td>หลังตัดแต่งครั้งที่ 3</td>
+                <td>2.5</td>
+                <td></td>
+                <td>
+                  <button type="button" class="btn btn-success mx-sm-2"><i class="fa fa-pencil-square-o"></i></button>
+                  <button type="button" class="btn btn-danger"><i class="fa fa-times"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>61-06-001-LT-B02</td>
+                <td>เนื้อสะโพกนอก</td>
+                <td>885123400211102</td>
+                <td>13.34</td>
+                <td>7 วัน</td>
+                <td>หลังตัดแต่งครั้งที่ 3</td>
+                <td>2.0</td>
+                <td></td>
+                <td>
+                  <button type="button" class="btn btn-success mx-sm-2"><i class="fa fa-pencil-square-o"></i></button>
+                  <button type="button" class="btn btn-danger"><i class="fa fa-times"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>61-06-001-LT-B03</td>
+                <td>เนื้อลูกมะพร้าว</td>
+                <td>885123400311103</td>
+                <td>14.49</td>
+                <td>7 วัน</td>
+                <td>หลังตัดแต่งครั้งที่ 3</td>
+                <td>3.0</td>
+                <td></td>
+                <td>
+                  <button type="button" class="btn btn-success mx-sm-2"><i class="fa fa-pencil-square-o"></i></button>
+                  <button type="button" class="btn btn-danger"><i class="fa fa-times"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>61-06-001-LT-B04</td>
+                <td>เนื้อหางสะโพก</td>
+                <td>885123400411104</td>
+                <td>16.66</td>
+                <td>7 วัน</td>
+                <td>หลังตัดแต่งครั้งที่ 3</td>
+                <td>2.0</td>
+                <td></td>
+                <td>
+                  <button type="button" class="btn btn-success mx-sm-2"><i class="fa fa-pencil-square-o"></i></button>
+                  <button type="button" class="btn btn-danger"><i class="fa fa-times"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>61-06-001-LT-B05</td>
+                <td>เนื้อสันสะโพก</td>
+                <td>885123400511105</td>
+                <td>15.54</td>
+                <td>7 วัน</td>
+                <td>หลังตัดแต่งครั้งที่ 3</td>
+                <td>2.5</td>
+                <td></td>
+                <td>
+                  <button type="button" class="btn btn-success mx-sm-2"><i class="fa fa-pencil-square-o"></i></button>
+                  <button type="button" class="btn btn-danger"><i class="fa fa-times"></i></button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="text-right ml-auto">
+              <h5>
+                <strong>จำนวนรายการทั้งหมด 5 รายการ</strong>
+              </h5>
+            </div>
+          </div>
+        </div>
