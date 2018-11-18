@@ -18,11 +18,8 @@ import { Report3Component } from './menu5/report3/report3.component';
 import { Report4Component } from './menu5/report4/report4.component';
 import { Report1D1Component } from './menu5/report1/report1-d1/report1-d1.component';
 import { Report1D2Component } from './menu5/report1/report1-d2/report1-d2.component';
-import { Report1D3Component } from './menu5/report1/report1-d3/report1-d3.component';
-import { Report1D4Component } from './menu5/report1/report1-d4/report1-d4.component';
 import { Report2D1Component } from './menu5/report2/report2-d1/report2-d1.component';
 import { Report2D2Component } from './menu5/report2/report2-d2/report2-d2.component';
-import { Report2D3Component } from './menu5/report2/report2-d3/report2-d3.component';
 import { OrderD1Component } from './menu3/order-d1/order-d1.component';
 import { OrderD2Component } from './menu3/order-d2/order-d2.component';
 import { StoreT1Component } from './menu4/store-t1/store-t1.component';
@@ -72,15 +69,12 @@ const router: Routes = [
   { path: 'menu4/store-t3', component: StoreT3Component },
   { path: 'menu4/store-t4', component: StoreT4Component },
   /* เมนู 5 */
-  { path: 'report3', component: Report3Component },
-  { path: 'report4', component: Report4Component },
-  { path: 'report1-d1', component: Report1D1Component },
-  { path: 'report1-d2', component: Report1D2Component },
-  { path: 'report1-d3', component: Report1D3Component },
-  { path: 'report1-d4', component: Report1D4Component },
-  { path: 'report2-d1', component: Report2D1Component },
-  { path: 'report2-d2', component: Report2D2Component },
-  { path: 'report2-d3', component: Report2D3Component },
+  { path: 'menu5/report1-d1', component: Report1D1Component },
+  { path: 'menu5/report1-d2', component: Report1D2Component },
+  { path: 'menu5/report2-d1', component: Report2D1Component },
+  { path: 'menu5/report2-d2', component: Report2D2Component },
+  { path: 'menu5/report3', component: Report3Component },
+  { path: 'menu5/report4', component: Report4Component },
   /* เมนู 6 */
   { path: 'menu6/notification-t1', component: NotificationT1Component },
   { path: 'menu6/notification-t2', component: NotificationT2Component },

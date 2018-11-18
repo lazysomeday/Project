@@ -36,11 +36,8 @@ import { Report3Component } from './pages/menu5/report3/report3.component';
 import { Report4Component } from './pages/menu5/report4/report4.component';
 import { Report1D1Component } from './pages/menu5/report1/report1-d1/report1-d1.component';
 import { Report1D2Component } from './pages/menu5/report1/report1-d2/report1-d2.component';
-import { Report1D3Component } from './pages/menu5/report1/report1-d3/report1-d3.component';
-import { Report1D4Component } from './pages/menu5/report1/report1-d4/report1-d4.component';
 import { Report2D1Component } from './pages/menu5/report2/report2-d1/report2-d1.component';
 import { Report2D2Component } from './pages/menu5/report2/report2-d2/report2-d2.component';
-import { Report2D3Component } from './pages/menu5/report2/report2-d3/report2-d3.component';
 import { Menu4Component } from './pages/menu4/menu4.component';
 import { StoreT1Component } from './pages/menu4/store-t1/store-t1.component';
 import { StoreT2Component } from './pages/menu4/store-t2/store-t2.component';
@@ -103,11 +100,8 @@ import { OrderD2Type4Component } from './pages/menu3/order-d2/order-d2-type4/ord
     Report4Component,
     Report1D1Component,
     Report1D2Component,
-    Report1D3Component,
-    Report1D4Component,
     Report2D1Component,
     Report2D2Component,
-    Report2D3Component,
     Menu4Component,
     StoreT1Component,
     StoreT2Component,

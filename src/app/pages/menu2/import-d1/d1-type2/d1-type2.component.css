@@ -103,10 +103,11 @@ label {
   width: 100%;
   height: 100%;
   padding: 5px 20px;
-  font-size: 18px;
+  font-size: 16px;
   text-align: left;
   border-radius: 5px;
   border: 1px solid #ccc;
+  color: #495057;
 }
 
 .dropdown {
@@ -119,17 +120,24 @@ label {
   position: absolute;
   background-color: white;
   min-width: 135px;
-  background-color: #f9f9f9;
   z-index: 1;
 }
 
 .dropdown-content a {
   display: block;
-  color: black;
-  font-size: 18px;
+  color: #495057;
+  font-size: 16px;
   padding: 5px 20px;
   text-decoration: none;
-  border: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+}
+
+.dropdown-content a:first-child {
+  border-top: 1px solid #ddd;
+}
+.dropdown-content a:last-child {
+  border-bottom: 1px solid #ddd;
 }
 
 .dropdown-content a:hover {

@@ -108,3 +108,8 @@ tr button {
   border-color: #4cae4c;
   outline: none;
 }
+
+.modal-lg {
+  max-width: 90%;
+}
+

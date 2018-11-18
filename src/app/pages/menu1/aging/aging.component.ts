@@ -119,13 +119,17 @@ export class AgingComponent implements OnInit {
   // }
 
   sw_alert() {
-    this.router.navigate(['menu1/set-weight']);
-    swal({
-      title: 'สำเร็จ!',
-      text: 'เลือกรายการบ่มซากเนื้อโคสำเร็จ',
-      type: 'success',
-      confirmButtonText: 'ปิด'
-    });
-    document.getElementById('openModalButton').click();
+    if (this.idcheck.length === 0) {
+      console.log('Error');
+    } else {
+      this.router.navigate(['menu1/set-weight']);
+      swal({
+        title: 'สำเร็จ!',
+        text: 'เลือกรายการบ่มซากเนื้อโคสำเร็จ',
+        type: 'success',
+        confirmButtonText: 'ปิด'
+      });
+      document.getElementById('openModalButton').click();
+    }
   }
 }

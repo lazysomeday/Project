@@ -24,6 +24,19 @@ export class SetWeightComponent implements OnInit {
   data: any;
   count;
 
+  items = {
+    $key: '',
+    aging_s: '',
+    aging_e: '',
+    code1: '',
+    barcode1: '',
+    weight_w1: '',
+    code2: '',
+    barcode2: '',
+    weight_w3: '',
+    name_aging: ''
+  };
+
   constructor(private api: Menu1Service, private user: UserService) {
     this.date = new Date();
 
@@ -83,6 +96,20 @@ export class SetWeightComponent implements OnInit {
         }
       }
     }
+  }
+
+  setWeightForm($key, aging_s, aging_e, code1, barcode1, weight_w1, code2,
+    barcode2, weight_w3, name_aging) {
+      this.items.$key = $key;
+      this.items.aging_s = aging_s;
+      this.items.aging_e = aging_e;
+      this.items.code1 = code1;
+      this.items.barcode1 = barcode1;
+      this.items.weight_w1 = weight_w1;
+      this.items.code2 = code2;
+      this.items.barcode2 = barcode2;
+      this.items.weight_w3 = weight_w3;
+      this.items.name_aging = name_aging;
   }
 
   sw_alert() {

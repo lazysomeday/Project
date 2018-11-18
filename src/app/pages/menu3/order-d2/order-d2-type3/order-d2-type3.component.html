@@ -7,10 +7,11 @@
     <div class="form-inline">
       <label class="col-form-label"><b> ประเภทการเบิกออก</b></label>
       <div class="dropdown mx-sm-4">
-        <button class="dropbtn">ชิ้นส่วนโค&nbsp;<i class="fa fa-caret-down"></i></button>
-        <div class="dropdown-content" style="width: 155px">
+        <button class="dropbtn">ซากเนื้อโค (ก้อน)&nbsp;<i class="fa fa-caret-down"></i></button>
+        <div class="dropdown-content" style="width: 145px">
           <a routerLink="/menu3/order-d2-type1">ซากเนื้อโค (ซ้าย-ขวา)</a>
-          <a routerLink="/menu3/order-d2-type2">ชิ้นเนื้อโค</a>
+          <a routerLink="/menu3/order-d2-type2">ซากเนื้อโค (บน-ล่าง)</a>
+          <a routerLink="/menu3/order-d2-type4">ชิ้นส่วนโค</a>
         </div>
       </div>
 
@@ -33,119 +34,48 @@
       </button>
     </div>
   </div>
-   
+
   <div class="card shadow p">
     <div class="card-header">
-      <h5><i class="fa fa-table"></i> รายการเบิกไปจำหน่าย (ชิ้นส่วนโค)</h5>
+      <h5><i class="fa fa-table"></i> รายการเบิกไปจำหน่ายซากเนื้อโค (ก้อน)</h5>
     </div>
     <div class="card-body">
           <table id="tables">
             <thead>
               <tr>
-                <th width=130px>ลำดับ</th>
-                <th width=130px>วันที่เบิกออก</th>
-                <th width=130px>เวลา</th>
-                <th width=130px>รหัสชิ้นส่วนโค</th>
-                <th width=130px>ประเภทชิ้นส่วนโค</th>
-                <th width=130px>น้ำหนักชิ้นส่วนโค(กก.)</th>
-                <th width=130px>จำนวน</th>
-                <th width=130px>ราคา(บาท)</th>
+                <th>ลำดับ</th>
+                <th>วันที่เบิกออก</th>
+                <th>เวลา</th>
+                <th>รหัสซาก</th>
+                <th>ประเภทซาก</th>
+                <th>รหัสบาร์โค้ดซาก</th>
+                <th>น้ำหนักอุ่น(กก.)</th>
+                <th>สถานะ</th>
+                <th>เกรดซาก</th>
+                <th>จำนวนซาก</th>
+                <th>ราคาซาก(บาท)</th>
                 <th>ชื่อผู้นำเข้า</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td width=130px>1</td>
-                <td width=130px>06-12-2018</td>
-                <td width=130px>23:59 น.</td>
-                <td width=130px>61-06-001-EN</td>
-                <td width=130px>เครื่องใน</td>
-                <td width=130px>120.25</td>
-                <td width=130px>1</td>
-                <td width=130px>-</td>
-                <td>ทศวรรษ</td>
-              </tr>
-              <tr>
-                <td width=130px>2</td>
-                <td width=130px>06-12-2018</td>
-                <td width=130px>23:59 น.</td>
-                <td width=130px>61-06-001-HE</td>
-                <td width=130px>หัว</td>
-                <td width=130px>75.45</td>
-                <td width=130px>1</td>
-                <td width=130px>-</td>
-                <td>ทศวรรษ</td>
-              </tr>
-              <tr>
-                <td width=130px>3</td>
-                <td width=130px>06-12-2018</td>
-                <td width=130px>23:59 น.</td>
-                <td width=130px>61-06-001-TA</td>
-                <td width=130px>หาง</td>
-                <td width=130px>42.15</td>
-                <td width=130px>1</td>
-                <td width=130px>-</td>
-                <td>ทศวรรษ</td>
-              </tr>
-              <tr>
-                <td width=130px>4</td>
-                <td width=130px>06-12-2018</td>
-                <td width=130px>23:59 น.</td>
-                <td width=130px>61-06-001-CO</td>
-                <td width=130px>หนัง</td>
-                <td width=130px>48.65</td>
-                <td width=130px>1</td>
-                <td width=130px>-</td>
-                <td>ทศวรรษ</td>
-              </tr>
-              <tr>
-                <td width=130px>5</td>
-                <td width=130px>06-12-2018</td>
-                <td width=130px>23:59 น.</td>
-                <td width=130px>61-06-001-LE</td>
-                <td width=130px>ขา</td>
-                <td width=130px>68.42</td>
-                <td width=130px>4</td>
-                <td width=130px>-</td>
-                <td>ทศวรรษ</td>
-              </tr>
-              <tr>
-                <td width=130px>6</td>
-                <td width=130px>06-12-2018</td>
-                <td width=130px>23:59 น.</td>
-                <td width=130px>61-06-001-FA</td>
-                <td width=130px>ไขมัน</td>
-                <td width=130px>21.52</td>
-                <td width=130px>1</td>
-                <td width=130px>-</td>
-                <td>ทศวรรษ</td>
-              </tr>
-              <tr>
-                <td width=130px>7</td>
-                <td width=130px>06-12-2018</td>
-                <td width=130px>23:59 น.</td>
-                <td width=130px>61-06-001-ON</td>
-                <td width=130px>อองเล</td>
-                <td width=130px>1.85</td>
-                <td width=130px>1</td>
-                <td width=130px>-</td>
-                <td>ทศวรรษ</td>
-              </tr>
-              <tr>
-                <td width=130px>8</td>
-                <td width=130px>06-12-2018</td>
-                <td width=130px>23:59 น.</td>
-                <td width=130px>61-06-001-HO</td>
-                <td width=130px>กีบเท้า</td>
-                <td width=130px>68.48</td>
-                <td width=130px>4</td>
-                <td width=130px>-</td>
+                <td>1</td>
+                <td>06-12-2018</td>
+                <td>23:59 น.</td>
+                <td>61-06-001-L</td>
+                <td>ซากซ้าย</td>
+                <td>885123400110000</td>
+                <td>521.64</td>
+                <td>หลังตัดเกรด</td>
+                <td>2.0</td>
+                <td>1</td>
+                <td>8,250.00</td>
                 <td>ทศวรรษ</td>
               </tr>
             </tbody>
           </table>
           <div class="text-right ml-auto">
-            <h5><strong>จำนวนรายการทั้งหมด 8 รายการ</strong></h5>
+            <h5><strong>จำนวนรายการทั้งหมด 5 รายการ</strong></h5>
           </div>
         </div>
       </div>

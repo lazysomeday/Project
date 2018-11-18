@@ -31,38 +31,41 @@
         <table id="tables">
           <thead>
             <tr>
-              <th width="50px">ลำดับ</th>
-              <th width="80px">วันที่เริ่มบ่ม</th>
-              <th width="80px">วันที่บ่มเสร็จ</th>
-              <th width="90px">รหัสซากซ้าย</th>
-              <th width="125px">รหัสบาร์โค้ดซากซ้าย</th>
+              <th width="70px">ลำดับ</th>
+              <th width="100px">วันที่เริ่มบ่ม</th>
+              <th width="100px">วันที่บ่มเสร็จ</th>
+              <th width="110px">รหัสซากซ้าย</th>
+              <th width="130px">รหัสบาร์โค้ดซากซ้าย</th>
               <th width="130px">น้ำหนักซากซ้ายอุ่น(กก.)</th>
-              <th width="130px">น้ำหนักซากซ้ายเย็น(กก.)</th>
-              <th width="90px">รหัสซากขวา</th>
-              <th width="125px">รหัสบาร์โค้ดซากขวา</th>
-              <th width="130px">น้ำหนักอุ่นซากขวา(กก.)</th>
-              <th width="130px">น้ำหนักเย็นซากขวา(กก.)</th>
-              <th>ชื่อผู้บ่ม</th>
+              <th width="110px">รหัสซากขวา</th>
+              <th width="130px">รหัสบาร์โค้ดซากขวา</th>
+              <th width="130px">น้ำหนักซากขวาอุ่น(กก.)</th>
+              <th width="110px">ชื่อผู้บ่ม</th>
+              <th>บันทึกน้ำหนักเย็น</th>
             </tr>
           </thead>
           <tbody>
             <tr *ngFor="let s of data;let i = index">
-              <td width="50px">{{i+1}}</td>
-              <td width="80px">{{s.aging_s}}</td>
-              <td width="80px">{{s.aging_e}}</td>
-              <td width="90px">{{s.code1}}</td>
-              <td width="125px">{{s.barcode1}}</td>
+              <td width="70px">{{i+1}}</td>
+              <td width="100px">{{s.aging_s}}</td>
+              <td width="100px">{{s.aging_e}}</td>
+              <td width="110px">{{s.code1}}</td>
+              <td width="130px">{{s.barcode1}}</td>
               <td width="130px">{{s.weight_w1}}</td>
-              <td width="130px">
+              <!-- <td width="130px">
                 <input type="text" class="form-control col-6" maxlength="6" />
-              </td>
-              <td width="90px">{{s.code2}}</td>
-              <td width="125px">{{s.barcode2}}</td>
+              </td> -->
+              <td width="110px">{{s.code2}}</td>
+              <td width="130px">{{s.barcode2}}</td>
               <td width="130px">{{s.weight_w2}}</td>
-              <td width="130px">
-                <input type="text" class="form-control col-6" maxlength="6" />
+              <td width="110px">{{s.name_aging}}</td>
+              <td>
+                <button type="button" class="btn btn-success ff mx-sm-2" data-toggle="modal" data-target="#modelSW"
+                (click)="setWeightForm(s.key,s.aging_s,s.aging_e,s.code1,s.barcode1,s.weight_w1
+                ,s.code2,s.barcode2,s.weight_w3,s.name_aging)">
+                <i class="fa fa-pencil-square-o" id="ii"></i>
+              </button>
               </td>
-              <td>{{s.name_aging}}</td>
             </tr>
           </tbody>
         </table>
@@ -112,16 +115,16 @@
       <thead>
         <tr>
           <th width="50px">ลำดับ</th>
-          <th width="80px">วันที่เริ่มบ่ม</th>
-          <th width="80px">วันที่บ่มเสร็จ</th>
+          <th width="70px">วันที่เริ่มบ่ม</th>
+          <th width="70px">วันที่บ่มเสร็จ</th>
           <th width="90px">รหัสซากซ้าย</th>
           <th width="125px">รหัสบาร์โค้ดซากซ้าย</th>
-          <th width="130px">น้ำหนักซากซ้ายอุ่น(กก.)</th>
-          <th width="130px">น้ำหนักซากซ้ายเย็น(กก.)</th>
+          <th width="130px">น้ำหนัก<br>ซากซ้ายอุ่น(กก.)</th>
+          <th width="130px">น้ำหนัก<br>ซากซ้ายเย็น(กก.)</th>
           <th width="90px">รหัสซากขวา</th>
           <th width="125px">รหัสบาร์โค้ดซากขวา</th>
-          <th width="130px">น้ำหนักอุ่นซากขวา(กก.)</th>
-          <th width="130px">น้ำหนักเย็นซากขวา(กก.)</th>
+          <th width="130px">น้ำหนัก<br>ซากขวาอุ่น(กก.)</th>
+          <th width="130px">น้ำหนัก<br>ซากขวาเย็น(กก.)</th>
           <th>ชื่อผู้บ่ม</th>
         </tr>
       </thead>
@@ -137,7 +140,38 @@
       บันทึก <i class="fa fa-floppy-o"></i>
     </button>
   </div>
-
 </div>
 
-<!-- <td><input id="text" type="text" class="form-control col-4"></td> -->
+<div class="modal fade" id="modelSW" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <form> <!-- (ngSubmit)="onEdit(items.$key, data)" #data="ngForm"-->
+      <div class="modal-content">
+        <div class="modal-header"><b>บันทึกน้ำหนักซากเย็น</b></div>
+        <div class="modal-body">
+          <div class="row">
+          <div class="col">
+            <div class="form-group row">
+              <label id="ff">รหัสบาร์โค้ดซากซ้าย</label>
+              <div class="col-sm-7 ml-auto">
+                <input type="text" class="form-control" name="barcode1" ngModel={{items.barcode1}}/>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-group row">
+              <label id="ff">รหัสบาร์โค้ดซากซ้าย</label>
+              <div class="col-sm-7 ml-auto">
+                <input type="text" class="form-control" name="barcode1" ngModel={{items.barcode1}}/>
+              </div>
+            </div>
+          </div>
+        </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">ปิด </button>
+            <button type="submit" value="submit" class="btn btn-primary">บันทึกการเปลี่ยนแปลง</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
