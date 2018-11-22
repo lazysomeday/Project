@@ -148,4 +148,24 @@ export class SettingComponent implements OnInit {
       });
     }
   }
+
+  sw_alert() {
+    swal({
+      title: 'ยืนยัน!',
+      text: 'ต้องการลบบัญชีผู้ใช้งานนี้หรือไม่?',
+      type: 'warning',
+      showCancelButton: true,
+      confirmButtonText: 'ยืนยัน',
+      cancelButtonText: 'กลับ'
+    }).then((result) => {
+      if (result.value) {
+        swal({
+          title: 'สำเร็จ!',
+          text: 'ลบผู้ใช้งานสำเร็จ!',
+          type: 'success',
+          confirmButtonText: 'ปิด'
+        });
+      }
+    });
+  }
 }

@@ -4,153 +4,273 @@
   <p class="text-center"><strong>การแจ้งเตือน</strong></p>
 
   <div class="row col r1">
-    <div class="t1 col-4">
+    <div class="t1 col-3">
       <div class="card shadow p">
         <div class="card-header">
           <a><i class="material-icons">&#xe7f7;</i>&nbsp;ประเภทการแจ้งเตือน</a>
         </div>
         <div class="card-body c1">
           <div class="row aa">
-            <button type="button" class="btn btn-primary" routerLink="/menu6/notification-t1">
+            <button type="button" class="btn btn-primary ml-1" routerLink="/menu6/notification-t1">
               วันใกล้หมดอายุ
             </button>
           </div>
           <div class="row aa">
-            <button type="button" class="btn btn-primary" routerLink="/menu6/notification-t2">
+            <button type="button" class="btn btn-primary ml-1" routerLink="/menu6/notification-t2">
               วันครบกำหนดบ่มซาก
             </button>
           </div>
           <div class="row aa">
-            <button type="button" class="btn btn-primary" id="active" routerLink="/menu6/notification-t3">
+            <button type="button" class="btn btn-primary ml-1" id="active" routerLink="/menu6/notification-t3">
               การนำเข้า
             </button>
           </div>
           <div class="row aa">
-            <button type="button" class="btn btn-primary" routerLink="/menu6/notification-t4">
+            <button type="button" class="btn btn-primary ml-1" routerLink="/menu6/notification-t4">
               การเบิกออก
             </button>
           </div>
         </div>
       </div>
     </div>
-    <div class="t2 col-8">
+    <div class="t2 col-9">
       <div class="card shadow p">
         <div class="card-header">
           <a>&nbsp;&nbsp;การนำเข้า</a>
         </div>
         <div class="card-body">
-          <table>
-            <thead>
-              <tr>
-                <th>ลำดับ</th>
-                <th>วันใกล้หมดอายุ</th>
-                <th>รายการ</th>
-                <th>จำนวน</th>
-                <th>รายละเอียด</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>01-11-2561</td>
-                <td>ก้อนเนื้อ-ทีโบน</td>
-                <td>12</td>
-                <td>
-                  <button class="btn btn-success">
-                    <i class="far fa-file-alt"></i>
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>01-11-2561</td>
-                <td>ก้อนเนื้อ-สันใน</td>
-                <td>6</td>
-                <td>
-                  <button class="btn btn-success">
-                    <i class="far fa-file-alt"></i>
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>01-11-2561</td>
-                <td>ก้อนเนื้อ-สันนอก</td>
-                <td>6</td>
-                <td>
-                  <button class="btn btn-success">
-                    <i class="far fa-file-alt"></i>
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>4</td>
-                <td>08-11-2561</td>
-                <td>ซากเนื้อโค-ซีกซ้ายบน</td>
-                <td>4</td>
-                <td>
-                  <button class="btn btn-success">
-                    <i class="far fa-file-alt"></i>
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>5</td>
-                <td>8-11-2561</td>
-                <td>ซากเนื้อโค-ซีกขวาบน</td>
-                <td>4</td>
-                <td>
-                  <button class="btn btn-success">
-                    <i class="far fa-file-alt"></i>
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>6</td>
-                <td>08-11-2561</td>
-                <td>ซากเนื้อโค-ซีกซ้ายล่าง</td>
-                <td>2</td>
-                <td>
-                  <button class="btn btn-success">
-                    <i class="far fa-file-alt"></i>
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>7</td>
-                <td>08-11-2561</td>
-                <td>ซากเนื้อโค-ซีกขวาล่าง</td>
-                <td>2</td>
-                <td>
-                  <button class="btn btn-success">
-                    <i class="far fa-file-alt"></i>
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>8</td>
-                <td>15-11-2561</td>
-                <td>ก้อนเนื้อ-รักบี้</td>
-                <td>10</td>
-                <td>
-                  <button class="btn btn-success">
-                    <i class="far fa-file-alt"></i>
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>9</td>
-                <td>15-11-2561</td>
-                <td>ก้อนเนื้อ-ใบพาย</td>
-                <td>16</td>
-                <td>
-                  <button class="btn btn-success">
-                    <i class="far fa-file-alt"></i>
-                  </button>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="row">
+            <div class="col">
+              <div class="text-center2"><label><b>นำเข้าจากเชือด</b></label></div>
+              <table>
+                <thead>
+                  <tr>
+                    <th width=55>ลำดับ</th>
+                    <th width=90>วันใกล้หมดอายุ</th>
+                    <th width=150>รายการ</th>
+                    <th width=60>จำนวน</th>
+                    <th>รายละเอียด</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td width=55>1</td>
+                    <td width=90>01-11-2561</td>
+                    <td width=150>ก้อนเนื้อ-ทีโบน</td>
+                    <td width=60>4</td>
+                    <td>
+                      <button class="btn btn-success" routerLink="/menu2/set-weight">
+                        <i class="far fa-file-alt"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td width=55>2</td>
+                    <td width=90>01-11-2561</td>
+                    <td width=150>ก้อนเนื้อ-สันใน</td>
+                    <td width=60>6</td>
+                    <td>
+                      <button class="btn btn-success">
+                        <i class="far fa-file-alt"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td width=55>3</td>
+                    <td width=90>01-11-2561</td>
+                    <td width=150>ก้อนเนื้อ-สันนอก</td>
+                    <td width=60>6</td>
+                    <td>
+                      <button class="btn btn-success">
+                        <i class="far fa-file-alt"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td width=55>4</td>
+                    <td width=90>08-11-2561</td>
+                    <td width=150>ซากเนื้อโค-ซีกซ้ายบน</td>
+                    <td width=60>4</td>
+                    <td>
+                      <button class="btn btn-success">
+                        <i class="far fa-file-alt"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td width=55>5</td>
+                    <td width=90>08-11-2561</td>
+                    <td width=150>ซากเนื้อโค-ซีกขวาบน</td>
+                    <td width=60>4</td>
+                    <td>
+                      <button class="btn btn-success">
+                        <i class="far fa-file-alt"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td width=55>6</td>
+                    <td width=90>08-11-2561</td>
+                    <td width=150>ซากเนื้อโค-ซีกซ้ายล่าง</td>
+                    <td width=60>2</td>
+                    <td>
+                      <button class="btn btn-success">
+                        <i class="far fa-file-alt"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td width=55>7</td>
+                    <td width=90>08-11-2561</td>
+                    <td width=150>ซากเนื้อโค-ซีกขวาล่าง</td>
+                    <td width=60>2</td>
+                    <td>
+                      <button class="btn btn-success">
+                        <i class="far fa-file-alt"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td width=55>8</td>
+                    <td width=90>15-11-2561</td>
+                    <td width=150>ก้อนเนื้อ-รักบี้</td>
+                    <td width=60>10</td>
+                    <td>
+                      <button class="btn btn-success">
+                        <i class="far fa-file-alt"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td width=55>9</td>
+                    <td width=90>15-11-2561</td>
+                    <td width=150>ก้อนเนื้อ-ใบพาย</td>
+                    <td width=60>16</td>
+                    <td>
+                      <button class="btn btn-success">
+                        <i class="far fa-file-alt"></i>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="col">
+                <div class="text-center2"><label><b>นำเข้าจากตัดแต่ง</b></label></div>
+                <table>
+                  <thead>
+                    <tr>
+                      <th width=55>ลำดับ</th>
+                      <th width=90>วันใกล้หมดอายุ</th>
+                      <th width=150>รายการ</th>
+                      <th width=60>จำนวน</th>
+                      <th>รายละเอียด</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td width=55>1</td>
+                      <td width=90>01-11-2561</td>
+                      <td width=150>ก้อนเนื้อ-ทีโบน</td>
+                      <td width=60>4</td>
+                      <td>
+                        <button class="btn btn-success" routerLink="/menu2/set-weight">
+                          <i class="far fa-file-alt"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td width=55>2</td>
+                      <td width=90>01-11-2561</td>
+                      <td width=150>ก้อนเนื้อ-สันใน</td>
+                      <td width=60>6</td>
+                      <td>
+                        <button class="btn btn-success">
+                          <i class="far fa-file-alt"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td width=55>3</td>
+                      <td width=90>01-11-2561</td>
+                      <td width=150>ก้อนเนื้อ-สันนอก</td>
+                      <td width=60>6</td>
+                      <td>
+                        <button class="btn btn-success">
+                          <i class="far fa-file-alt"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td width=55>4</td>
+                      <td width=90>08-11-2561</td>
+                      <td width=150>ซากเนื้อโค-ซีกซ้ายบน</td>
+                      <td width=60>4</td>
+                      <td>
+                        <button class="btn btn-success">
+                          <i class="far fa-file-alt"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td width=55>5</td>
+                      <td width=90>08-11-2561</td>
+                      <td width=150>ซากเนื้อโค-ซีกขวาบน</td>
+                      <td width=60>4</td>
+                      <td>
+                        <button class="btn btn-success">
+                          <i class="far fa-file-alt"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td width=55>6</td>
+                      <td width=90>08-11-2561</td>
+                      <td width=150>ซากเนื้อโค-ซีกซ้ายล่าง</td>
+                      <td width=60>2</td>
+                      <td>
+                        <button class="btn btn-success">
+                          <i class="far fa-file-alt"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td width=55>7</td>
+                      <td width=90>08-11-2561</td>
+                      <td width=150>ซากเนื้อโค-ซีกขวาล่าง</td>
+                      <td width=60>2</td>
+                      <td>
+                        <button class="btn btn-success">
+                          <i class="far fa-file-alt"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td width=55>8</td>
+                      <td width=90>15-11-2561</td>
+                      <td width=150>ก้อนเนื้อ-รักบี้</td>
+                      <td width=60>10</td>
+                      <td>
+                        <button class="btn btn-success">
+                          <i class="far fa-file-alt"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td width=55>9</td>
+                      <td width=90>15-11-2561</td>
+                      <td width=150>ก้อนเนื้อ-ใบพาย</td>
+                      <td width=60>16</td>
+                      <td>
+                        <button class="btn btn-success">
+                          <i class="far fa-file-alt"></i>
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+          </div>
         </div>
       </div>
     </div>

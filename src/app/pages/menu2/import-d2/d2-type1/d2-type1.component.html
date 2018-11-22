@@ -3,114 +3,144 @@
 <div class="header">
   <p class="text-center"><strong>นำเข้าจากแผนกตัดแต่ง</strong></p>
 
-  <div class="row">
+  <div class="row r1">
     <div class="form-inline">
-      <label class="col-form-label"><b> ประเภทการนำเข้า</b></label>
-      <div class="dropdown mx-sm-4">
-        <button class="dropbtn">
-          ซากเนื้อโค (บน-ล่าง)&nbsp;<i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content" style="width: 152px">
+      <label class="col-form-label " style="margin-left: 110px"><b> ประเภทการนำเข้า</b></label>
+      <div class="dropdown mx-sm-3">
+        <button class="dropbtn">ซากเนื้อโค (บน-ล่าง) &nbsp;<i class="fa fa-caret-down"></i></button>
+        <div class="dropdown-content">
           <a routerLink="/menu2/d2-type2">ซากเนื้อโค (ก้อน)</a>
-          <a routerLink="/menu2/d2-type3">ชิ้นเนื้อโค</a>
         </div>
       </div>
-
-      <div class="input-group">
-        <label class="col-form-label mx-sm-3"><b> วันที่นำเข้า </b></label>
-        <input type="date" class="form-control" placeholder="กรอกวันที่.." />
-        <div class="input-group-append">
-          <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+      <label class="col-form-label"><b> ชนิดของซาก</b></label>
+      <div class="d1 ml-3">
+        <div class="input-group form-search ml-auto">
+            <select class="form-control search-query fcsq1" > <!--(change)="filter_1(t1)" ngModel="ทั้งหมด" #t1-->
+              <option value="ทั้งหมด">ทั้งหมด</option>
+              <option value="ซากซ้ายบน">ซากซ้ายบน</option>
+              <option value="ซากซ้ายล่าง">ซากซ้ายล่าง</option>
+              <option value="ซากขวาบน">ซากขวาบน</option>
+              <option value="ซากขวาล่าง">ซากขวาล่าง</option>
+            </select>
+          </div>
+      </div>
+      <label class="col-form-label ml-3"><b>ค้นหาโดย</b></label>
+      <div class="input-group form-search  ml-3">
+        <select class="form-control search-query fcsq2"> <!-- (change)="selectMenu(slt)" ngModel="1" #slt-->
+          <option value="1">ชื่อผู้นำเข้า</option>
+        </select>
+        <input type="text" class="form-control search-query" id="myInput" style="height: 35px"/> <!--(keyup)="searchTable()" ngModel-->
+        <div class="input-group-prepend ">
+          <span class="input-group-text" id="igt" style="height: 35px;"> <i class="fa fa-search"></i></span>
         </div>
       </div>
-      <div class="input-group">
-        <label class="col-form-label mx-sm-3"><b> ถึงวันที่ </b></label>
-        <input type="date" class="form-control" placeholder="กรอกวันที่.." />
-        <div class="input-group-append">
-          <span class="input-group-text"><i class="fa fa-calendar"></i></span>
-        </div>
-      </div>
-      <button type="submit" class="btn btn-primary mx-sm-3">
-        ค้นหา <i class="fa fa-search"></i>
-      </button>
     </div>
   </div>
-
+  <div class="row r2 ">
+    <div class="input-group c1">
+      <label class="label mr-3 mt-2 test" style="margin-left: 160px"><b> วันที่นำเข้า </b></label>
+      <input type="date" class="form-control " id="fc1">
+      <div class="input-group-append">
+        <span class="input-group-text"><i style='font-size:24px' class='far'>&#xf073;</i></span>
+      </div>
+    </div>
+    <div class="input-group c2">
+        <label class="label ml-3 mr-3 mt-2"><b> ถึงวันที่ </b></label>
+        <input type="date" class="form-control " id="fc2">
+        <div class="input-group-append">
+          <span class="input-group-text"><i style='font-size:24px' class='far'>&#xf073;</i></span>
+        </div>
+      </div>
+    <button type="submit" class="btn btn-primary mx-sm-3"> ค้นหา <i class="fa fa-search"></i></button>
+  </div>
   <div class="card shadow p">
     <div class="card-header">
       <h5>
-        <i class="fa fa-table"></i> รายการนำเข้าจากแผนกตัดแต่งซากเนื้อโค
-        (บน-ล่าง)
-      </h5>
+        <i class="fa fa-table"></i> รายการนำเข้าจากแผนกตัดแต่ง</h5>
     </div>
     <div class="card-body">
       <table id="tables">
         <thead>
           <tr>
-            <th width=70px>ลำดับ</th>
+            <th width=50px>ลำดับ</th>
             <th width=100px>วันที่นำเข้า</th>
             <th width=80px>เวลา</th>
             <th width=100px>รหัสซาก</th>
             <th width=100px>ประเภทซาก</th>
             <th width=120px>รหัสบาร์โค้ดซาก</th>
-            <th width=100px>น้ำหนักซาก(กก.)</th>
+            <th width=100px>น้ำหนักซาก (กก.)</th>
+            <th width=80px>เกรดซาก</th>
+            <th width=100px>ราคาซาก (บาท)</th>
+            <th width=70px>ห้อง</th>
+            <th width=70px>ชั้น</th>
+            <th width=70px>ตะกร้า</th>
             <th width=120px>สถานะ</th>
-            <th width=100px>เกรดซาก</th>
-            <th width=100px>ราคาซาก(บาท)</th>
             <th>ชื่อผู้นำเข้า</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td width=70px>1</td>
-            <td width=100px>06-12-2560</td>
-            <td width=80px>23:59 น.</td>
-            <td width=100px>61-06-001-LT</td>
+            <td width=50px>1</td>
+            <td width=100px>วว-ดด-ปปปป</td>
+            <td width=80px>00:00 น.</td>
+            <td width=100px>000000</td>
             <td width=100px>ซากซ้ายบน</td>
-            <td width=120px>885123400111000</td>
-            <td width=100px>130.25</td>
+            <td width=120px>000000000000000</td>
+            <td width=100px>000.00</td>
+            <td width=80px>0.0</td>
+            <td width=100px>0.0</td>
+            <td width=70px>-</td>
+            <td width=70px>-</td>
+            <td width=70px>-</td>
             <td width=120px>หลังตัดแต่งครั้ง 1</td>
-            <td width=100px>2.0</td>
-            <td width=100px>1,250.00</td>
             <td>ทศวรรษ</td>
           </tr>
           <tr>
-            <td width=70px>2</td>
-            <td width=100px>06-12-2560</td>
-            <td width=80px>23:59 น.</td>
-            <td width=100px>61-06-001-LB</td>
+            <td width=50px>2</td>
+            <td width=100px>วว-ดด-ปปปป</td>
+            <td width=80px>00:00 น.</td>
+            <td width=100px>000000</td>
             <td width=100px>ซากซ้ายล่าง</td>
-            <td width=120px>885123400112000</td>
-            <td width=100px>132.54</td>
+            <td width=120px>000000000000000</td>
+            <td width=100px>000.00</td>
+            <td width=80px>0.0</td>
+            <td width=100px>0.0</td>
+            <td width=70px>-</td>
+            <td width=70px>-</td>
+            <td width=70px>-</td>
             <td width=120px>หลังตัดแต่งครั้ง 1</td>
-            <td width=100px>3.0</td>
-            <td width=100px>1,475.00</td>
             <td>ทศวรรษ</td>
           </tr>
           <tr>
-            <td width=70px>3</td>
-            <td width=100px>06-12-2560</td>
-            <td width=80px>23:59 น.</td>
-            <td width=100px>61-06-001-RT</td>
+            <td width=50px>3</td>
+            <td width=100px>วว-ดด-ปปปป</td>
+            <td width=80px>00:00 น.</td>
+            <td width=100px>000000</td>
             <td width=100px>ซากขวาบน</td>
-            <td width=120px>885123400121000</td>
-            <td width=100px>134.18</td>
+            <td width=120px>000000000000000</td>
+            <td width=100px>000.00</td>
+            <td width=80px>0.0</td>
+            <td width=100px>0.0</td>
+            <td width=70px>-</td>
+            <td width=70px>-</td>
+            <td width=70px>-</td>
             <td width=120px>หลังตัดแต่งครั้ง 1</td>
-            <td width=100px>2.5</td>
-            <td width=100px>1,325.00</td>
             <td>ทศวรรษ</td>
           </tr>
           <tr>
-            <td width=70px>4</td>
-            <td width=100px>06-12-2560</td>
-            <td width=80px>23:59 น.</td>
-            <td width=100px>61-06-001-RB</td>
+            <td width=50px>4</td>
+            <td width=100px>วว-ดด-ปปปป</td>
+            <td width=80px>00:00 น.</td>
+            <td width=100px>000000</td>
             <td width=100px>ซากขวาล่าง</td>
-            <td width=120px>885123400122000</td>
-            <td width=100px>131.86</td>
+            <td width=120px>000000000000000</td>
+            <td width=100px>000.00</td>
+            <td width=80px>0.0</td>
+            <td width=100px>0.0</td>
+            <td width=70px>-</td>
+            <td width=70px>-</td>
+            <td width=70px>-</td>
             <td width=120px>หลังตัดแต่งครั้ง 1</td>
-            <td width=100px>2.0</td>
-            <td width=100px>1,175.00</td>
             <td>ทศวรรษ</td>
           </tr>
         </tbody>

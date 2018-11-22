@@ -3,27 +3,45 @@
 <div class="header">
   <p class="text-center"><strong>บันทึกน้ำหนักบ่ม</strong></p>
 
-  <div class="row">
-      <div class="form-inline">
-        <label class="col-form-label"><b>ค้นหาโดย</b></label>
-        <div class="input-group form-search mx-sm-4">
-          <select class="form-control search-query" (change)="selectMenu(slt)" ngModel="1" #slt>
-            <option value="1">ชื่อผู้บ่ม</option>
-          </select>
-          <input type="text" class="form-control search-query" style="font-size: 21px;border-right: #4CAF50"
-            id="myInput" (keyup)="searchTable()" ngModel style="height: 30px"/>
-          <div class="input-group-prepend">
-            <span class="input-group-text" style="border-radius: 0px 5px 5px 0px;background-color: #4CAF50;color: white">
-              <i class="fa fa-search"></i></span>
-          </div>
+  <div class="row fix">
+    <div class="form-inline">
+      <label class="col-form-label"><b>ค้นหาโดย</b></label>
+      <div class="input-group form-search mx-sm-4">
+        <select
+          class="form-control search-query"
+          (change)="selectMenu(slt)"
+          ngModel="1"
+          #slt
+        >
+          <option value="1">ชื่อผู้บ่ม</option>
+        </select>
+        <input
+          type="text"
+          class="form-control search-query"
+          style="font-size: 21px;border-right: #4CAF50"
+          id="myInput"
+          (keyup)="searchTable()"
+          ngModel
+          style="height: 30px"
+        />
+        <div class="input-group-prepend">
+          <span
+            class="input-group-text"
+            style="border-radius: 0px 5px 5px 0px;background-color: #4CAF50;color: white"
+          >
+            <i class="fa fa-search"></i
+          ></span>
         </div>
       </div>
+    </div>
   </div>
 
   <div class="card shadow p">
     <div class="card-header">
       <h5 style="font-weight: bold">
-        <i class="fa fa-table"></i> รายการบันทึกน้ำหนักบ่ม<!-- กำหนดน้ำหนักซากเนื้อโค (ซากเย็น) -->
+        <i class="fa fa-table"></i> รายการบันทึกน้ำหนักบ่ม<!--
+          กำหนดน้ำหนักซากเนื้อโค (ซากเย็น)
+        -->
       </h5>
     </div>
     <div class="card-body">
@@ -45,133 +63,131 @@
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor="let s of data;let i = index">
-              <td width="70px">{{i+1}}</td>
-              <td width="100px">{{s.aging_s}}</td>
-              <td width="100px">{{s.aging_e}}</td>
-              <td width="110px">{{s.code1}}</td>
-              <td width="130px">{{s.barcode1}}</td>
-              <td width="130px">{{s.weight_w1}}</td>
-              <!-- <td width="130px">
-                <input type="text" class="form-control col-6" maxlength="6" />
-              </td> -->
-              <td width="110px">{{s.code2}}</td>
-              <td width="130px">{{s.barcode2}}</td>
-              <td width="130px">{{s.weight_w2}}</td>
-              <td width="110px">{{s.name_aging}}</td>
+            <tr *ngFor="let s of data; let i = index">
+              <td width="70px">{{ i + 1 }}</td>
+              <td width="100px">{{ s.aging_s }}</td>
+              <td width="100px">{{ s.aging_e }}</td>
+              <td width="110px">{{ s.code1 }}</td>
+              <td width="130px">{{ s.barcode1 }}</td>
+              <td width="130px">{{ s.weight_w1 }}</td>
+              <!--
+                <td width="130px">
+                  <input type="text" class="form-control col-6" maxlength="6" />
+                </td>
+              -->
+              <td width="110px">{{ s.code2 }}</td>
+              <td width="130px">{{ s.barcode2 }}</td>
+              <td width="130px">{{ s.weight_w2 }}</td>
+              <td width="110px">{{ s.name_aging }}</td>
               <td>
-                <button type="button" class="btn btn-success ff mx-sm-2" data-toggle="modal" data-target="#modelSW"
-                (click)="setWeightForm(s.key,s.aging_s,s.aging_e,s.code1,s.barcode1,s.weight_w1
-                ,s.code2,s.barcode2,s.weight_w3,s.name_aging)">
-                <i class="fa fa-pencil-square-o" id="ii"></i>
-              </button>
+                <button
+                  type="button"
+                  class="btn btn-success ff mx-sm-2"
+                  data-toggle="modal"
+                  data-target="#modelSW"
+                  (click)="
+                    setWeightForm(
+                      s.key,
+                      s.aging_s,
+                      s.aging_e,
+                      s.code1,
+                      s.barcode1,
+                      s.weight_w1,
+                      s.code2,
+                      s.barcode2,
+                      s.weight_w2,
+                      s.name_aging
+                    )
+                  "
+                >
+                  <i class="fa fa-pencil-square-o" id="ii"></i>
+                </button>
               </td>
             </tr>
           </tbody>
         </table>
         <div class="text-right ml-auto">
-          <h5><strong>จำนวนรายการทั้งหมด {{count}} รายการ</strong></h5>
+          <h5>
+            <strong>จำนวนรายการทั้งหมด {{ count }} รายการ</strong>
+          </h5>
         </div>
       </div>
-      <div class="nav_button">
+      <!-- <div class="nav_button">
         <button type="button" (click)="sw_alert()" class="btn btn-success">
           บันทึก <i class="fa fa-floppy-o"></i>
         </button>
-      </div>
+      </div> -->
     </div>
-  </div>
-</div>
-
-
-<p class="text-center" style="margin-top: 80px"><strong>ประวัติการบ่มซากเนื้อโค</strong></p>
-
-<div class="row form-inline justify-content-center">
-    <div class="input-group">
-      <label class="col-form-label mx-sm-3"><b> วันที่ </b></label>
-      <input type="date" class="form-control" placeholder="กรอกวันที่.." style="height: 43px;">
-      <div class="input-group-append">
-        <span class="input-group-text"><i class="fa fa-calendar"></i></span>
-      </div>
-    </div>
-    <div class="input-group">
-      <label class="col-form-label mx-sm-3"><b> ถึงวันที่ </b></label>
-      <input type="date" class="form-control" placeholder="กรอกวันที่.." style="height: 43px;">
-      <div class="input-group-append">
-        <span class="input-group-text"><i class="fa fa-calendar"></i></span>
-      </div>
-    </div>
-    <button type="submit" class="btn btn-primary mx-sm-3">ค้นหา <i class="fa fa-search"></i></button>
-  </div>
-
-<div class="card shadow p">
-    <div class="card-header">
-      <h5 style="font-weight: bold">
-        <i class="fa fa-table"></i> รายการประวัติการบ่มซากเนื้อโค
-      </h5>
-    </div>
-<div class="card-body">
-  <div class="table-responsive-sm">
-    <table id="tables">
-      <thead>
-        <tr>
-          <th width="50px">ลำดับ</th>
-          <th width="70px">วันที่เริ่มบ่ม</th>
-          <th width="70px">วันที่บ่มเสร็จ</th>
-          <th width="90px">รหัสซากซ้าย</th>
-          <th width="125px">รหัสบาร์โค้ดซากซ้าย</th>
-          <th width="130px">น้ำหนัก<br>ซากซ้ายอุ่น(กก.)</th>
-          <th width="130px">น้ำหนัก<br>ซากซ้ายเย็น(กก.)</th>
-          <th width="90px">รหัสซากขวา</th>
-          <th width="125px">รหัสบาร์โค้ดซากขวา</th>
-          <th width="130px">น้ำหนัก<br>ซากขวาอุ่น(กก.)</th>
-          <th width="130px">น้ำหนัก<br>ซากขวาเย็น(กก.)</th>
-          <th>ชื่อผู้บ่ม</th>
-        </tr>
-      </thead>
-      <tbody>
-      </tbody>
-    </table>
-    <div class="text-right ml-auto">
-      <h5><strong>จำนวนรายการทั้งหมด 0 รายการ</strong></h5>
-    </div>
-  </div>
-  <div class="nav_button">
-    <button type="button" (click)="sw_alert()" class="btn btn-success">
-      บันทึก <i class="fa fa-floppy-o"></i>
-    </button>
   </div>
 </div>
 
 <div class="modal fade" id="modelSW" tabindex="-1" role="dialog">
-  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-    <form> <!-- (ngSubmit)="onEdit(items.$key, data)" #data="ngForm"-->
-      <div class="modal-content">
-        <div class="modal-header"><b>บันทึกน้ำหนักซากเย็น</b></div>
-        <div class="modal-body">
-          <div class="row">
-          <div class="col">
-            <div class="form-group row">
-              <label id="ff">รหัสบาร์โค้ดซากซ้าย</label>
-              <div class="col-sm-7 ml-auto">
-                <input type="text" class="form-control" name="barcode1" ngModel={{items.barcode1}}/>
+  <form (ngSubmit)="addColdWeight(d)" #d="ngForm">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header"><b>บันทึกน้ำหนักซากเย็น</b></div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-6">
+            <div class="form-group">
+              <label>รหัสบาร์โค้ดซากซ้าย</label>
+              <input type="text" class="form-control col-auto" id="ip" name=barcode1 ngModel={{items.barcode1}} disabled/>
+            </div>
+            <div class="form-group">
+                <label>น้ำหนักซากซ้ายอุ่น</label>
+            <div class="input-group">
+                <input type="text" class="form-control col-sm-6" id="ip" name=weight_w1 ngModel={{items.weight_w1}} disabled/>
+                <div class="input-group-append">
+                  <span class="input-group-text">กิโลกรัม</span>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+                <label>น้ำหนักซากซ้ายเย็น</label>
+            <div class="input-group">
+                <input type="text" class="form-control col-sm-6" id="ip" name=weight_c1 maxlength=6 ngModel [(ngModel)]="weight_c1">
+                <div class="input-group-append">
+                  <span class="input-group-text">กิโลกรัม</span>
+                </div>
               </div>
             </div>
           </div>
-          <div class="col">
-            <div class="form-group row">
-              <label id="ff">รหัสบาร์โค้ดซากซ้าย</label>
-              <div class="col-sm-7 ml-auto">
-                <input type="text" class="form-control" name="barcode1" ngModel={{items.barcode1}}/>
+          <div class="col-6">
+            <div class="form-group">
+              <label>รหัสบาร์โค้ดซากขวา</label>
+              <input type="text" class="form-control col-auto" id="ip" name=barcode2 ngModel={{items.barcode2}} disabled/>
+            </div>
+            <div class="form-group">
+                <label>น้ำหนักซากขวาอุ่น</label>
+            <div class="input-group">
+                <input type="text" class="form-control col-sm-6" id="ip" name=weight_w2 ngModel={{items.weight_w2}} disabled/>
+                <div class="input-group-append">
+                  <span class="input-group-text">กิโลกรัม</span>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+                <label>น้ำหนักซากขวาเย็น</label>
+            <div class="input-group">
+                <input type="text" class="form-control col-sm-6" id="ip" name=weight_c2 maxlength=6 ngModel [(ngModel)]="weight_c2">
+                <div class="input-group-append">
+                  <span class="input-group-text">กิโลกรัม</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">ปิด </button>
-            <button type="submit" value="submit" class="btn btn-primary">บันทึกการเปลี่ยนแปลง</button>
-          </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">
+            กลับ
+          </button>
+          <button type="submit" value="submit" class="btn btn-primary" (click)="sw_alert()">
+            บันทึก
+          </button>
         </div>
       </div>
-    </form>
+    </div>
   </div>
+  </form>
 </div>
+<button id="openModalButton" [hidden]="true" data-toggle="modal" data-target="#modelSW">Open Modal</button>

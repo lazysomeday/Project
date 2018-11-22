@@ -22,9 +22,9 @@
     margin-top: 10px;
   }
 
-  .card{
-    margin-left: -15px;
-    margin-right: -15px;
+  .card2{
+    margin-left: 15%;
+    margin-right: 15%;
     overflow: hidden;
     border-radius: 20px 20px 0px 0px;
   }
@@ -87,3 +87,7 @@
     width: 30%;
   }
 
+  .btn-danger {
+    height: 38px;
+    width: 50px;
+  }

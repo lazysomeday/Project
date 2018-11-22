@@ -3,32 +3,34 @@
 <div class="header">
   <p class="text-center"><strong>ตั้งค่าระบบ (เฉพาะ Admin)</strong></p>
 
-  <div class="card shadow p">
+  <div class="card2 shadow p">
     <div class="card-header">
-      <h5><i class="fa fa-table"></i> ตารางกำหนดสิทธิ์ผู้ใช้งาน</h5>
+      <h5><i class="fa fa-table"></i> ตารางบัญชีผู้ใช้งาน</h5>
     </div>
     <div class="card-body">
           <table id="tables">
             <thead>
               <tr>
-                <th>ลำดับ</th>
-                <th>ชื่อ</th>
-                <th>นามสกุล</th>
-                <th>ชื่อผู้ใช้ (Username)</th>
-                <th>อีเมล</th>
+                <th width=60>ลำดับ</th>
+                <th width=140>ชื่อ</th>
+                <th width=140>นามสกุล</th>
+                <th width=140>ชื่อผู้ใช้ (Username)</th>
+                <th width=140>อีเมล</th>
                 <th>จัดการ</th>
               </tr>
             </thead>
             <tbody>
               <tr *ngFor="let d of datas;let i = index">
-                <td>{{i+1}}</td>
-                <td>{{d.fname}}</td>
-                <td>{{d.lname}}</td>
-                <td>{{d.users}}</td>
-                <td>{{d.email}}</td>
+                <td width=60>{{i+1}}</td>
+                <td width=140>{{d.fname}}</td>
+                <td width=140>{{d.lname}}</td>
+                <td width=140>{{d.users}}</td>
+                <td width=140>{{d.email}}</td>
                 <td>
                   <button type="button" class="btn btn-success" data-toggle="modal" data-target="#settingModal"
-                  (click)="edit_StatusMember(d.key,d.fname,d.lname,d.users,d.email,d.privilege_id)">ตั้งค่าสิทธิ์ผู้ใช้งาน</button>
+                  (click)="edit_StatusMember(d.key,d.fname,d.lname,d.users,d.email,d.privilege_id)">ตั้งค่าสิทธิ์</button>
+                  <button type="button" class="btn btn-danger mx-sm-2"
+                  (click)="sw_alert()"><i class="material-icons">delete_forever</i></button>
                 </td>
               </tr>
             </tbody>

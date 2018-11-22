@@ -70,6 +70,7 @@ import { NotificationT2Component } from './pages/menu6/notification-t2/notificat
 import { NotificationT3Component } from './pages/menu6/notification-t3/notification-t3.component';
 import { NotificationT4Component } from './pages/menu6/notification-t4/notification-t4.component';
 import { OrderD2Type4Component } from './pages/menu3/order-d2/order-d2-type4/order-d2-type4.component';
+import { HistoryAgingComponent } from './pages/menu1/history-aging/history-aging.component';
 
 @NgModule({
   declarations: [
@@ -131,7 +132,8 @@ import { OrderD2Type4Component } from './pages/menu3/order-d2/order-d2-type4/ord
     NotificationT2Component,
     NotificationT3Component,
     NotificationT4Component,
-    OrderD2Type4Component
+    OrderD2Type4Component,
+    HistoryAgingComponent
   ],
   imports: [
     BrowserModule,

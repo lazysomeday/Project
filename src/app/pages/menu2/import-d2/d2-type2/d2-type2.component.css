@@ -1,11 +1,12 @@
 .text-center {
   font-size: 24px;
+  margin-bottom: 30px;
 }
 
 .card{
   margin-top: -10px;
-  margin-left: 8%;
-  margin-right: 8%;
+  margin-left: 2%;
+  margin-right: 2%;
   overflow: hidden;
   border-radius: 20px 20px 0px 0px;
 }
@@ -22,10 +23,17 @@
   text-align: center;
 }
 
-.row{
-  margin-left: 8%;
-  margin-right: 8%;
-  margin-top: 20px;
+.r1 {
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+.r2 {
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 0px;
   margin-bottom: 20px;
 }
 
@@ -113,6 +121,7 @@ label {
 .dropdown {
   position: relative;
   display: inline-block;
+  width: 145px;
 }
 
 .dropdown-content {
@@ -121,6 +130,7 @@ label {
   background-color: white;
   min-width: 135px;
   z-index: 1;
+  width: 145px;
 }
 
 .dropdown-content a {
@@ -173,4 +183,44 @@ select, option {
 
 #sz {
   font-size: 18px;
+}
+
+.c1{
+  width: 45%;
+}
+
+.c2{
+  width: 30%;
+}
+
+#fc1{
+  width: 30px;
+  border-radius: 5px 0px 0px 05px;
+}
+
+#fc2{
+  width: 30px;
+  border-radius: 5px 0px 0px 5px;
+}
+.test{
+  align-self: center;
+}
+
+.fcsq1{
+  height: 35px;
+  width: 150px;
+}
+
+.fcsq2{
+
+  height: 35px;
+}
+
+h5{
+  font-weight: normal;
+  font-size: 20px;
+}
+
+#igt{
+  border-radius: 0px 5px 5px 0px;
 }

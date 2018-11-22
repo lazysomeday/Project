@@ -20,7 +20,7 @@ export class SetWeightComponent implements OnInit {
     check : false
   };
   /*--- ตัวแปรในฟังก์ชัน selectMenu() ---*/
-  check = 11;
+  check = 9;
   data: any;
   count;
 
@@ -33,10 +33,11 @@ export class SetWeightComponent implements OnInit {
     weight_w1: '',
     code2: '',
     barcode2: '',
-    weight_w3: '',
+    weight_w2: '',
     name_aging: ''
   };
-
+  weight_c1 = '';
+  weight_c2 = '';
   constructor(private api: Menu1Service, private user: UserService) {
     this.date = new Date();
 
@@ -99,7 +100,7 @@ export class SetWeightComponent implements OnInit {
   }
 
   setWeightForm($key, aging_s, aging_e, code1, barcode1, weight_w1, code2,
-    barcode2, weight_w3, name_aging) {
+    barcode2, weight_w2, name_aging) {
       this.items.$key = $key;
       this.items.aging_s = aging_s;
       this.items.aging_e = aging_e;
@@ -108,14 +109,19 @@ export class SetWeightComponent implements OnInit {
       this.items.weight_w1 = weight_w1;
       this.items.code2 = code2;
       this.items.barcode2 = barcode2;
-      this.items.weight_w3 = weight_w3;
+      this.items.weight_w2 = weight_w2;
       this.items.name_aging = name_aging;
+  }
+
+  addColdWeight() {
+    this.weight_c1 = '';
+    this.weight_c2 = '';
   }
 
   sw_alert() {
     swal({
       title: 'ยืนยัน!',
-      text: 'ต้องการยืนยันการกำหนดน้ำหนักหรือไม่?',
+      text: 'ยืนยันการบันทึกน้ำหนักซากเย็นหรือไม่?',
       type: 'warning',
       showCancelButton: true,
       confirmButtonText: 'ยืนยัน',
@@ -124,10 +130,11 @@ export class SetWeightComponent implements OnInit {
       if (result.value) {
         swal({
           title: 'สำเร็จ!',
-          text: 'กำหนดน้ำหนักสำเร็จ',
+          text: 'บันทึกน้ำหนักสำเร็จ',
           type: 'success',
           confirmButtonText: 'ปิด'
         });
+        document.getElementById('openModalButton').click();
       }
     });
   }

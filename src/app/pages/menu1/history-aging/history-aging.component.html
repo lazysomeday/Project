@@ -1,0 +1,110 @@
+<app-navbar></app-navbar>
+
+<div class="header">
+  <p class="text-center">
+    <strong>ประวัติการบ่มซากเนื้อโค</strong>
+  </p>
+
+<div class="row form-inline justify-content-center">
+  <div class="form-inline">
+    <label class="col-form-label"><b>ค้นหาโดย</b></label>
+    <div class="input-group form-search mx-sm-4">
+      <select
+        class="form-control search-query"
+        (change)="selectMenu(slt)"
+        ngModel="1"
+        #slt
+      >
+        <option value="1">ชื่อผู้บ่ม</option>
+      </select>
+      <input
+        type="text"
+        class="form-control search-query"
+        style="font-size: 21px;border-right: #4CAF50"
+        id="myInput"
+        (keyup)="searchTable()"
+        ngModel
+        style="height: 30px"
+      />
+      <div class="input-group-prepend">
+        <span
+          class="input-group-text"
+          style="border-radius: 0px 5px 5px 0px;background-color: #4CAF50;color: white;height: 30px;"
+        >
+          <i class="fa fa-search"></i></span>
+        </div>
+      </div>
+          <div class="input-group">
+            <label class="col-form-label mx-sm-3"><b> วันที่นำเข้า </b></label>
+            <input type="date" class="form-control" placeholder="กรอกวันที่.." />
+            <div class="input-group-append">
+              <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label class="col-form-label mx-sm-3"><b> ถึงวันที่ </b></label>
+            <input type="date" class="form-control" placeholder="กรอกวันที่.." />
+            <div class="input-group-append">
+              <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary mx-sm-3"> <!-- (click)="hide()" -->
+            ค้นหา <i class="fa fa-search"></i>
+          </button>
+        </div>
+</div>
+
+  <div class="card shadow p">
+    <div class="card-header">
+      <h5 style="font-weight: bold">
+        <i class="fa fa-table"></i> รายการประวัติการบ่มซากเนื้อโค
+      </h5>
+    </div>
+    <div class="card-body">
+      <!-- <div class="table-responsive-sm"> -->
+        <table id="tables">
+          <thead>
+            <tr>
+              <th width="50px">ลำดับ</th>
+              <th width="70px">วันที่เริ่มบ่ม</th>
+              <th width="70px">วันที่บ่มเสร็จ</th>
+              <th width="90px">รหัสซากซ้าย</th>
+              <th width="125px">รหัสบาร์โค้ดซากซ้าย</th>
+              <th width="130px">น้ำหนัก<br />ซากซ้ายอุ่น(กก.)</th>
+              <th width="130px">น้ำหนัก<br />ซากซ้ายเย็น(กก.)</th>
+              <th width="90px">รหัสซากขวา</th>
+              <th width="125px">รหัสบาร์โค้ดซากขวา</th>
+              <th width="130px">น้ำหนัก<br />ซากขวาอุ่น(กก.)</th>
+              <th width="130px">น้ำหนัก<br />ซากขวาเย็น(กก.)</th>
+              <th>ชื่อผู้บ่ม</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td width="50px">1</td>
+              <td width="70px">06-12-2018</td>
+              <td width="70px">13-12-2018</td>
+              <td width="90px">61-06-001-L</td>
+              <td width="125px">885123400110000</td>
+              <td width="130px">521.64</td>
+              <td width="130px">999.99</td>
+              <td width="90px">61-06-001-R</td>
+              <td width="125px">885123400120000</td>
+              <td width="130px">537.42</td>
+              <td width="130px">999.99</td>
+              <td>ทศวรรษ</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="text-right ml-auto">
+          <h5><strong>จำนวนรายการทั้งหมด 1 รายการ</strong></h5>
+        </div>
+      </div>
+      <!-- <div class="nav_button">
+        <button type="button" (click)="sw_alert()" class="btn btn-success">
+          บันทึก <i class="fa fa-floppy-o"></i>
+        </button>
+      </div> -->
+  </div>
+</div>

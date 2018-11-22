@@ -3,141 +3,171 @@
 <div class="header">
   <p class="text-center"><strong>นำเข้าจากแผนกเชือด</strong></p>
 
-  <div class="row">
+  <div class="row r1">
     <div class="form-inline">
-      <label class="col-form-label"><b> ประเภทการนำเข้า</b></label>
-      <div class="dropdown mx-sm-4">
-        <button class="dropbtn">
-          ชิ้นส่วนโค&nbsp;<i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content" style="width: 155px">
+      <label class="col-form-label" style="margin-left: 110px"><b> ประเภทการนำเข้า</b></label>
+      <div class="dropdown mx-sm-3">
+        <button class="dropbtn">ซากเนื้อโค (ส่วนอื่น) &nbsp;<i class="fa fa-caret-down"></i></button>
+        <div class="dropdown-content">
           <a routerLink="/menu2/d1-type1">ซากเนื้อโค (ซ้าย-ขวา)</a>
         </div>
       </div>
-
-      <div class="input-group">
-        <label class="col-form-label mx-sm-3"><b> วันที่นำเข้า </b></label>
-        <input type="date" class="form-control" placeholder="กรอกวันที่.." />
-        <div class="input-group-append">
-          <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+      <label class="col-form-label"><b> ชนิดของซาก</b></label>
+      <div class="d1 ml-3">
+        <div class="input-group form-search ml-auto">
+            <select class="form-control search-query fcsq1">
+              <option value="ทั้งหมด">ทั้งหมด</option>
+              <option value="ซากซ้าย">เครื่องใน</option>
+              <option value="ซากขวา">หัว</option>
+              <option value="ซากขวา">หาง</option>
+              <option value="ซากขวา">หนัง</option>
+              <option value="ซากขวา">ขา</option>
+              <option value="ซากขวา">ไขมัน</option>
+              <option value="ซากขวา">อองเล</option>
+            </select>
+          </div>
+      </div>
+      <label class="col-form-label ml-3"><b>ค้นหาโดย</b></label>
+      <div class="input-group form-search  ml-3">
+        <select class="form-control search-query fcsq1" (change)="selectMenu(slt)" ngModel="1" #slt>
+          <option value="1">ชื่อผู้นำเข้า</option>
+        </select>
+        <input type="text" class="form-control search-query" id="myInput"(keyup)="searchTable()" ngModel style="height: 35px"/>
+        <div class="input-group-prepend">
+          <span class="input-group-text" style="height: 35px;" id="igt"> <i class="fa fa-search"></i></span>
         </div>
       </div>
-      <div class="input-group">
-        <label class="col-form-label mx-sm-3"><b> ถึงวันที่ </b></label>
-        <input type="date" class="form-control" placeholder="กรอกวันที่.." />
-        <div class="input-group-append">
-          <span class="input-group-text"><i class="fa fa-calendar"></i></span>
-        </div>
-      </div>
-      <button type="submit" class="btn btn-primary mx-sm-3">
-        ค้นหา <i class="fa fa-search"></i>
-      </button>
     </div>
+  </div>
+  <div class="row r2">
+    <div class="input-group c1">
+      <label class="label mr-3 mt-2 test" style="margin-left: 180px"><b> วันที่นำเข้า </b></label>
+      <input type="date" class="form-control "id="fc1">
+      <div class="input-group-append">
+        <span class="input-group-text"><i style='font-size:24px' class='far'>&#xf073;</i></span>
+      </div>
+    </div>
+    <div class="input-group c2">
+        <label class="label ml-3 mr-3 mt-2"><b> ถึงวันที่ </b></label>
+        <input type="date" class="form-control "id="fc2">
+        <div class="input-group-append">
+          <span class="input-group-text"><i style='font-size:24px' class='far'>&#xf073;</i></span>
+        </div>
+      </div>
+    <button type="submit" class="btn btn-primary mx-sm-3"> ค้นหา <i class="fa fa-search"></i></button>
   </div>
 
   <div class="card shadow p">
     <div class="card-header">
-      <h5><i class="fa fa-table"></i> รายการนำเข้าจากแผนกเชือด (ชิ้นส่วนโค)</h5>
+      <h5><i class="fa fa-table"></i> รายการที่นำเข้าจากแผนกเชือด</h5>
     </div>
     <div class="card-body">
       <table id="tables">
         <thead>
           <tr>
-            <th width=130px>ลำดับ</th>
-            <th width=130px>วันที่นำเข้า</th>
-            <th width=130px>เวลา</th>
-            <th width=130px>รหัสชิ้นส่วนโค</th>
-            <th width=130px>ประเภทชิ้นส่วนโค</th>
-            <th width=130px>น้ำหนักชิ้นส่วนโค(กก.)</th>
-            <th width=130px>จำนวน</th>
+            <th width=70px>ลำดับ</th>
+            <th width=100px>วันที่นำเข้า</th>
+            <th width=90px>เวลา</th>
+            <th width=110px>รหัสซาก</th>
+            <th width=100px>ประเภท</th>
+            <th width=130px>รหัสบาร์โค้ดซาก</th>
+            <th width=110px>น้ำหนักอุ่น (กก.)</th>
+            <th width=50px>ห้อง</th>
+            <th width=50px>ชั้น</th>
+            <th width=50px>ตะกร้า</th>
+            <th width=100px>สถานะ</th>
             <th>ชื่อผู้นำเข้า</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td width=130px>1</td>
-            <td width=130px>06-12-2018</td>
-            <td width=130px>23:59 น.</td>
-            <td width=130px>61-06-001-EN</td>
-            <td width=130px>เครื่องใน</td>
-            <td width=130px>120.25</td>
-            <td width=130px>1</td>
+            <td width=70px>1</td>
+            <td width=100px>วว-ดด-ปปปป</td>
+            <td width=90px>00:00 น.</td>
+            <td width=110px>000000</td>
+            <td width=100px>-</td>
+            <td width=130px>000000000000000</td>
+            <td width=110px>000.00</td>
+            <td width=50px>0</td>
+            <td width=50px>0</td>
+            <td width=50px>0</td>
+            <td width=100px>คงคลัง</td>
             <td>ทศวรรษ</td>
           </tr>
           <tr>
-            <td width=130px>2</td>
-            <td width=130px>06-12-2018</td>
-            <td width=130px>23:59 น.</td>
-            <td width=130px>61-06-001-HE</td>
-            <td width=130px>หัว</td>
-            <td width=130px>75.45</td>
-            <td width=130px>1</td>
+            <td width=70px>2</td>
+            <td width=100px>วว-ดด-ปปปป</td>
+            <td width=90px>00:00 น.</td>
+            <td width=110px>000000</td>
+            <td width=100px>-</td>
+            <td width=130px>000000000000000</td>
+            <td width=110px>000.00</td>
+            <td width=50px>0</td>
+            <td width=50px>0</td>
+            <td width=50px>0</td>
+            <td width=100px>คงคลัง</td>
             <td>ทศวรรษ</td>
           </tr>
           <tr>
-            <td width=130px>3</td>
-            <td width=130px>06-12-2018</td>
-            <td width=130px>23:59 น.</td>
-            <td width=130px>61-06-001-TA</td>
-            <td width=130px>หาง</td>
-            <td width=130px>42.15</td>
-            <td width=130px>1</td>
+            <td width=70px>3</td>
+            <td width=100px>วว-ดด-ปปปป</td>
+            <td width=90px>00:00 น.</td>
+            <td width=110px>000000</td>
+            <td width=100px>-</td>
+            <td width=130px>000000000000000</td>
+            <td width=110px>000.00</td>
+            <td width=50px>0</td>
+            <td width=50px>0</td>
+            <td width=50px>0</td>
+            <td width=100px>คงคลัง</td>
             <td>ทศวรรษ</td>
           </tr>
           <tr>
-            <td width=130px>4</td>
-            <td width=130px>06-12-2018</td>
-            <td width=130px>23:59 น.</td>
-            <td width=130px>61-06-001-CO</td>
-            <td width=130px>หนัง</td>
-            <td width=130px>48.65</td>
-            <td width=130px>1</td>
+            <td width=70px>4</td>
+            <td width=100px>วว-ดด-ปปปป</td>
+            <td width=90px>00:00 น.</td>
+            <td width=110px>000000</td>
+            <td width=100px>-</td>
+            <td width=130px>000000000000000</td>
+            <td width=110px>000.00</td>
+            <td width=50px>0</td>
+            <td width=50px>0</td>
+            <td width=50px>0</td>
+            <td width=100px>คงคลัง</td>
             <td>ทศวรรษ</td>
           </tr>
           <tr>
-            <td width=130px>5</td>
-            <td width=130px>06-12-2018</td>
-            <td width=130px>23:59 น.</td>
-            <td width=130px>61-06-001-LE</td>
-            <td width=130px>ขา</td>
-            <td width=130px>68.42</td>
-            <td width=130px>4</td>
+            <td width=70px>5</td>
+            <td width=100px>วว-ดด-ปปปป</td>
+            <td width=90px>00:00 น.</td>
+            <td width=110px>000000</td>
+            <td width=100px>-</td>
+            <td width=130px>000000000000000</td>
+            <td width=110px>000.00</td>
+            <td width=50px>0</td>
+            <td width=50px>0</td>
+            <td width=50px>0</td>
+            <td width=100px>คงคลัง</td>
             <td>ทศวรรษ</td>
           </tr>
           <tr>
-            <td width=130px>6</td>
-            <td width=130px>06-12-2018</td>
-            <td width=130px>23:59 น.</td>
-            <td width=130px>61-06-001-FA</td>
-            <td width=130px>ไขมัน</td>
-            <td width=130px>21.52</td>
-            <td width=130px>1</td>
-            <td>ทศวรรษ</td>
-          </tr>
-          <tr>
-            <td width=130px>7</td>
-            <td width=130px>06-12-2018</td>
-            <td width=130px>23:59 น.</td>
-            <td width=130px>61-06-001-ON</td>
-            <td width=130px>อองเล</td>
-            <td width=130px>1.85</td>
-            <td width=130px>1</td>
-            <td>ทศวรรษ</td>
-          </tr>
-          <tr>
-            <td width=130px>8</td>
-            <td width=130px>06-12-2018</td>
-            <td width=130px>23:59 น.</td>
-            <td width=130px>61-06-001-HO</td>
-            <td width=130px>กีบเท้า</td>
-            <td width=130px>68.48</td>
-            <td width=130px>4</td>
+            <td width=70px>6</td>
+            <td width=100px>วว-ดด-ปปปป</td>
+            <td width=90px>00:00 น.</td>
+            <td width=110px>000000</td>
+            <td width=100px>-</td>
+            <td width=130px>000000000000000</td>
+            <td width=110px>000.00</td>
+            <td width=50px>0</td>
+            <td width=50px>0</td>
+            <td width=50px>0</td>
+            <td width=100px>คงคลัง</td>
             <td>ทศวรรษ</td>
           </tr>
         </tbody>
       </table>
       <div class="text-right ml-auto">
-        <h5><strong>จำนวนรายการทั้งหมด 8 รายการ</strong></h5>
+        <h5><strong>จำนวนรายการทั้งหมด 6 รายการ</strong></h5>
       </div>
     </div>
   </div>

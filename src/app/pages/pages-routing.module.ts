@@ -40,11 +40,13 @@ import { NotificationT1Component } from './menu6/notification-t1/notification-t1
 import { NotificationT2Component } from './menu6/notification-t2/notification-t2.component';
 import { NotificationT3Component } from './menu6/notification-t3/notification-t3.component';
 import { NotificationT4Component } from './menu6/notification-t4/notification-t4.component';
+import { HistoryAgingComponent } from './menu1/history-aging/history-aging.component';
 
 const router: Routes = [
   /* เมนู 1 */
   { path: 'menu1/aging', component: AgingComponent},
   { path: 'menu1/set-weight', component: SetWeightComponent},
+  { path: 'menu1/history-aging', component: HistoryAgingComponent},
   /* เมนู 2 */
   { path: 'menu2/import-d1', component: D1Type1Component },
   { path: 'menu2/d1-type1', component: D1Type1Component },
