@@ -10,7 +10,7 @@
         <button class="dropbtn">
           ซากเนื้อโค (ซ้าย-ขวา) <i class="fa fa-caret-down"></i>
         </button>
-        <div class="dropdown-content" style="width: 170px">
+        <div class="dropdown-content" style="width: 160px">
           <a routerLink="/menu4/store-t2">ซากเนื้อโค (บน-ล่าง)</a>
           <a routerLink="/menu4/store-t3">ซากเนื้อโค (ก้อน)</a>
           <!-- <a routerLink="/menu4/store-t4">ชิ้นเนื้อโค</a> -->
@@ -117,8 +117,8 @@
             <th width="110px">อายุ(วัน)</th>
             <th width="110px">สถานะ</th>
             <th width="110px">เกรด</th>
-            <th width="110px">ราคา(บาท)</th>
-            <th>ตัวเลือก</th>  <!-- [hidden]="privilege_id == '2'" -->
+            <th>ราคา(บาท)</th>
+            <!-- <th>ตัวเลือก</th>  [hidden]="privilege_id == '2'" -->
           </tr>
         </thead>
         <tbody>
@@ -132,8 +132,8 @@
             <td width="110px">{{ item.age }}</td>
             <td width="110px">{{ item.status }}</td>
             <td width="110px">{{ item.grade }}</td>
-            <td width="110px">{{ item.price }}</td>
-            <td>
+            <td>{{ item.price }}</td> <!-- width="110px"-->
+            <!-- <td>
               <button type="button" class="btn btn-success mx-sm-2" data-toggle="modal" data-target="#modelEdit"
                 (click)="editForm(item.key,item.code,item.type,item.barcode,item.weight_w,item.weight_c,
                     item.age,item.status,item.grade,item.price)">
@@ -142,7 +142,7 @@
               <button type="button" class="btn btn-danger" (click)="onDelete(item.key)">
                 <i class="fa fa-times"></i>
               </button>
-            </td>
+            </td> -->
           </tr>
         </tbody>
       </table>

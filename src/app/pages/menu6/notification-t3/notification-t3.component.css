@@ -115,3 +115,7 @@ tr button {
   margin-top: -10px;
   margin-bottom: -6px;
 }
+
+.modal-lg {
+  max-width: 60%;
+}

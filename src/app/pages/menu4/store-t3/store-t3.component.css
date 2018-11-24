@@ -4,8 +4,8 @@
 
 .card {
   margin-top: 10px;
-  margin-left: 5%;
-  margin-right: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
   overflow: hidden;
   border-radius: 20px 20px 0px 0px;
 }
@@ -23,8 +23,8 @@
 }
 
 .row {
-  margin-left: 5%;
-  margin-right: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
   margin-top: 15px;
 }
 

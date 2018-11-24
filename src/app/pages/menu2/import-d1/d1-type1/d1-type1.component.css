@@ -6,7 +6,7 @@
 .r1 {
   margin-left: 10%;
   margin-right: 10%;
-  margin-top: 0px;
+  margin-top: -10px;
   margin-bottom: 10px;
 }
 
@@ -183,8 +183,8 @@ select, option {
 
 .card{
   margin-top: -10px;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 5%;
+  margin-right: 5%;
   overflow: hidden;
   border-radius: 20px 20px 0px 0px;
 }
@@ -202,7 +202,6 @@ select, option {
 }
 .c1{
   width: 43%;
-
 }
 
 .c2{
@@ -222,10 +221,6 @@ select, option {
   align-self: center;
 }
 
-.fcsq1{
-  height: 35px;
-}
-
 h5{
   font-weight: normal;
   font-size: 20px;
@@ -236,7 +231,22 @@ h5{
 }
 
 .fcsq1{
-
   height: 35px;
-  width: 100px;
+}
+
+select, option, button[type=submit]{
+  font-size: 16px;
+}
+
+.fcsq2 {
+  height: 35px;
+  width: auto;
+}
+
+#myInput {
+  width: 125px;
+}
+
+h5 strong {
+  font-size: 18px;
 }

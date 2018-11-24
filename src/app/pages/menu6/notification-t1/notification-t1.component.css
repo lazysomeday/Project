@@ -56,6 +56,7 @@ table tbody tr:hover {
 .card-header {
   background-color: #006dcc;
   color: white;
+  font-size: 18px;
 }
 
 .far{
@@ -110,6 +111,6 @@ tr button {
 }
 
 .modal-lg {
-  max-width: 90%;
+  max-width: 60%;
 }
 

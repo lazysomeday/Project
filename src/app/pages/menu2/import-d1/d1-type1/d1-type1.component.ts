@@ -19,7 +19,7 @@ export class D1Type1Component implements OnInit {
     check : false
   };
   /*--- ตัวแปรในฟังก์ชัน selectMenu() ---*/
-  check = 4;
+  check = 9;
   hh = true;
   data: any;
   count;

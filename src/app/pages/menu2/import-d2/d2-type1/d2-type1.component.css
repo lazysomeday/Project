@@ -26,13 +26,12 @@
 .r1 {
   margin-left: 10%;
   margin-right: 10%;
-  margin-top: 0px;
+  margin-top: -10px;
   margin-bottom: 10px;
 
 }
 
 .r2 {
-
   margin-left: 10%;
   margin-right: 10%;
   margin-top: 0px;
@@ -211,14 +210,12 @@ select, option {
 }
 
 .fcsq1{
-
   height: 35px;
-  width: 100px;
 }
 
 .fcsq2{
-
   height: 35px;
+  width: auto;
 }
 
 h5{
@@ -228,4 +225,16 @@ h5{
 
 #igt{
   border-radius: 0px 5px 5px 0px;
+}
+
+select, option, button[type=submit] {
+  font-size: 16px;
+}
+
+#myInput {
+  width: 125px;
+}
+
+h5 strong {
+  font-size: 18px;
 }

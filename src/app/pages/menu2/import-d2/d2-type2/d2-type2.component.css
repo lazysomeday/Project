@@ -26,11 +26,13 @@
 .r1 {
   margin-left: 10%;
   margin-right: 10%;
-  margin-top: 0px;
+  margin-top: -10px;
   margin-bottom: 10px;
+
 }
 
 .r2 {
+
   margin-left: 10%;
   margin-right: 10%;
   margin-top: 0px;
@@ -121,7 +123,7 @@ label {
 .dropdown {
   position: relative;
   display: inline-block;
-  width: 145px;
+  width: 155px;
 }
 
 .dropdown-content {
@@ -130,7 +132,7 @@ label {
   background-color: white;
   min-width: 135px;
   z-index: 1;
-  width: 145px;
+  width: 155px;
 }
 
 .dropdown-content a {
@@ -186,10 +188,12 @@ select, option {
 }
 
 .c1{
+
   width: 45%;
 }
 
 .c2{
+
   width: 30%;
 }
 
@@ -208,12 +212,11 @@ select, option {
 
 .fcsq1{
   height: 35px;
-  width: 150px;
 }
 
 .fcsq2{
-
   height: 35px;
+  width: auto;
 }
 
 h5{
@@ -223,4 +226,16 @@ h5{
 
 #igt{
   border-radius: 0px 5px 5px 0px;
+}
+
+select, option, button[type=submit] {
+  font-size: 16px;
+}
+
+#myInput {
+  width: 125px;
+}
+
+h5 strong {
+  font-size: 18px;
 }

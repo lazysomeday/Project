@@ -84,7 +84,7 @@ export class AgingComponent implements OnInit {
     console.log(this.idcheck);
   }
 
-  dropdown_search(v) {        /* เลือกประเภทการ search */
+  dropdown_search(v) {       /* เลือกประเภทการ search */
     if (v.value === '1') {
       this.check = 4;
     } else {

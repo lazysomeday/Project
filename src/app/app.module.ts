@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
@@ -71,6 +71,7 @@ import { NotificationT3Component } from './pages/menu6/notification-t3/notificat
 import { NotificationT4Component } from './pages/menu6/notification-t4/notification-t4.component';
 import { OrderD2Type4Component } from './pages/menu3/order-d2/order-d2-type4/order-d2-type4.component';
 import { HistoryAgingComponent } from './pages/menu1/history-aging/history-aging.component';
+import { AdminOnlyComponent } from './setting/admin-only/admin-only.component';
 
 @NgModule({
   declarations: [
@@ -133,7 +134,8 @@ import { HistoryAgingComponent } from './pages/menu1/history-aging/history-aging
     NotificationT3Component,
     NotificationT4Component,
     OrderD2Type4Component,
-    HistoryAgingComponent
+    HistoryAgingComponent,
+    AdminOnlyComponent
   ],
   imports: [
     BrowserModule,

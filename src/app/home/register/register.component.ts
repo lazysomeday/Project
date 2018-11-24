@@ -78,10 +78,22 @@ export class RegisterComponent implements OnInit {
       this.router.navigate(['/login']);
     } else {
       this.checkuser = false;
+      swal({
+        title: 'ผิดพลาด!',
+        text: 'สมัครสมาชิกไม่สำเร็จ มีชื่อผู้ใช้นี้แล้ว',
+        type: 'error',
+        confirmButtonText: 'ปิด'
+      });
     }
   }
   } else {
     this.checkpass = false;
+    swal({
+      title: 'ผิดพลาด!',
+      text: 'สมัครสมาชิกไม่สำเร็จ รหัสผ่านไม่ตรงกัน',
+      type: 'error',
+      confirmButtonText: 'ปิด'
+    });
   }
 }
     // console.log(data.value);

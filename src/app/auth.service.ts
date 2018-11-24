@@ -18,7 +18,7 @@ public user: Observable<firebase.User>;
   login(email, password) {
     this.afAuth.auth.signInWithEmailAndPassword(email, password).then(
     (data) => {
-      this.router.navigate(['menu1/aging']);
+      this.router.navigate(['menu2/d1-type1']);
      const toast = swal.mixin({
       toast: true,
       position: 'top-end',

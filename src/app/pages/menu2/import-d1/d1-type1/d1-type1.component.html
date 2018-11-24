@@ -23,8 +23,12 @@
       </div>
       <label class="col-form-label ml-3"><b>ค้นหาโดย</b></label>
       <div class="input-group form-search  ml-3">
-        <select class="form-control search-query fcsq1" (change)="selectMenu(slt)" ngModel="1" #slt>
-          <option value="1">ชื่อผู้นำเข้า</option>
+        <select class="form-control search-query fcsq2" (change)="selectMenu(slt)" ngModel="1" #slt>
+          <option value="1">ชื่อเจ้าของ</option>
+          <option value="2">ชื่อผู้นำเข้า</option>
+          <option value="3">เบอร์โค</option>
+          <option value="4">รหัสซาก</option>
+          <option value="5">รหัสบาร์โค้ดซาก</option>
         </select>
         <input type="text" class="form-control search-query" id="myInput"(keyup)="searchTable()" ngModel style="height: 35px"/>
         <div class="input-group-prepend">
@@ -59,15 +63,17 @@
       <table id="tables">
         <thead>
           <tr>
-            <th width=70px>ลำดับ</th>
-            <th width=100px>วันที่นำเข้า</th>
-            <th width=90px>เวลา</th>
+            <th width=50px>ลำดับ</th>
+            <th width=150px>เจ้าของ</th>
+            <th width=90px>วันที่นำเข้า</th>
+            <th width=80px>เวลา</th>
+            <th width=110px>ประเภทซาก</th>
+            <th width=110px>เบอร์โค</th>
             <th width=110px>รหัสซาก</th>
-            <th width=120px>ประเภทซาก</th>
             <th width=130px>รหัสบาร์โค้ดซาก</th>
-            <th width=110px>น้ำหนักอุ่น (กก.)</th>
-            <th width=80px>ห้อง</th>
-            <th width=100px>สถานะ</th>
+            <!-- <th width=110px>น้ำหนักอุ่น (กก.)</th> -->
+            <th width=60px>ห้อง</th>
+            <th width=110px>สถานะ</th>
             <th>ชื่อผู้นำเข้า</th>
           </tr>
         </thead>
@@ -84,51 +90,55 @@
             <td width=120px>{{q.status}}</td>
             <td>{{q.name_import}}</td> -->
             <tr>
-              <td width=70px>1</td>
-              <td width=100px>วว-ดด-ปปปป</td>
-              <td width=90px>00:00 น.</td>
+              <td width=50px>1</td>
+              <td width=150px>จิตรภานุ สุยะศักดิ์</td>
+              <td width=90px>วว-ดด-ปปปป</td>
+              <td width=80px>00:00 น.</td>
+              <td width=110px>ซากซ้าย</td>
+              <td width=110px>-</td>
               <td width=110px>000000</td>
-              <td width=120px>-</td>
               <td width=130px>000000000000000</td>
-              <td width=110px>000.00</td>
-              <td width=80px>0</td>
-              <td width=100px>หลังเชือด</td>
+              <td width=60px>0</td>
+              <td width=110px>หลังเชือด</td>
               <td>ทศวรรษ</td>
             </tr>
             <tr>
-              <td width=70px>2</td>
-              <td width=100px>วว-ดด-ปปปป</td>
-              <td width=90px>00:00 น.</td>
+              <td width=50px>2</td>
+              <td width=150px>จิตรภานุ สุยะศักดิ์</td>
+              <td width=90px>วว-ดด-ปปปป</td>
+              <td width=80px>00:00 น.</td>
+              <td width=110px>ซากขวา</td>
+              <td width=110px>-</td>
               <td width=110px>000000</td>
-              <td width=120px>-</td>
               <td width=130px>000000000000000</td>
-              <td width=110px>000.00</td>
-              <td width=80px>0</td>
-              <td width=100px>หลังเชือด</td>
+              <td width=60px>0</td>
+              <td width=110px>หลังเชือด</td>
               <td>ทศวรรษ</td>
             </tr>
             <tr>
-              <td width=70px>3</td>
-              <td width=100px>วว-ดด-ปปปป</td>
-              <td width=90px>00:00 น.</td>
+              <td width=50px>3</td>
+              <td width=150px>สหกรณ์โคขุน</td>
+              <td width=90px>วว-ดด-ปปปป</td>
+              <td width=80px>00:00 น.</td>
+              <td width=110px>ซากซ้าย</td>
               <td width=110px>000000</td>
-              <td width=120px>-</td>
+              <td width=110px>000000</td>
               <td width=130px>000000000000000</td>
-              <td width=110px>000.00</td>
-              <td width=80px>0</td>
-              <td width=100px>หลังเชือด</td>
+              <td width=60px>0</td>
+              <td width=110px>หลังเชือด</td>
               <td>ทศวรรษ</td>
             </tr>
             <tr>
-              <td width=70px>4</td>
-              <td width=100px>วว-ดด-ปปปป</td>
-              <td width=90px>00:00 น.</td>
+              <td width=50px>4</td>
+              <td width=150px>สหกรณ์โคขุน</td>
+              <td width=90px>วว-ดด-ปปปป</td>
+              <td width=80px>00:00 น.</td>
+              <td width=110px>ซากขวา</td>
               <td width=110px>000000</td>
-              <td width=120px>-</td>
+              <td width=110px>000000</td>
               <td width=130px>000000000000000</td>
-              <td width=110px>000.00</td>
-              <td width=80px>0</td>
-              <td width=100px>หลังเชือด</td>
+              <td width=60px>0</td>
+              <td width=110px>หลังเชือด</td>
               <td>ทศวรรษ</td>
             </tr>
         </tbody>

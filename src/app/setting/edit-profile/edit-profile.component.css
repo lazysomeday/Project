@@ -15,7 +15,11 @@
 }
 
 .card {
-  margin-bottom: 15%;
+  margin-bottom: 10%;
+}
+
+.card-title {
+  margin-bottom: 25px;
 }
 
 .navbar-icon {
@@ -31,10 +35,6 @@ h5 {
   text-align: center;
   font-weight: bold;
   margin-bottom: 16px;
-}
-
-a {
-  margin-left: 20px;
 }
 
 .btn {
@@ -70,8 +70,37 @@ button {
 
 a {
   height: 50px;
+  margin-left: 20px;
 }
 
 br {
   line-height: 35px;
+}
+
+#mt {
+  margin-top: -8px;
+}
+
+#mg {
+  padding-left: 25px;
+}
+
+textarea:disabled {
+  height: 70px;
+  width: 136px;
+  border-radius: 5px;
+  background-color: #eeeeee;
+  border: 1px solid #ccc;
+  margin-bottom: -10px;
+}
+
+.textarea2 {
+  height: 90px;
+  width: 215px;
+  margin-left: 15px;
+  margin-bottom: -10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: #495057;
+  padding-left: 12px;
 }

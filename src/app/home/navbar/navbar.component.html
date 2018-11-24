@@ -29,7 +29,7 @@
 
   <div class="collapse navbar-collapse">
     <ul class="navbar-nav mr-auto">
-      <div class="dropdown">
+      <div class="dropdown" hidden>
         <button class="dropbtn" routerLink="/menu1" routerLinkActive="active"><i class="fas fa-thermometer-half"></i> การบ่มเนื้อ <i class="fa fa-caret-down"></i></button>
         <div class="dropdown-content" style="width: 160px">
           <a routerLink="/menu1/aging">บ่มซากเนื้อโค</a>
@@ -67,7 +67,7 @@
           <a routerLink="/menu5/report1-d1">ออกรายงานนำเข้า</a>
           <a routerLink="/menu5/report2-d1">ออกรายงานเบิกออก</a>
           <a routerLink="/menu5/report3">ออกรายงานคงคลัง</a>
-          <a routerLink="/menu5/report4">ออกรายงานการบ่มเนื้อ</a>
+          <!-- <a routerLink="/menu5/report4">ออกรายงานการบ่มเนื้อ</a> -->
         </div>
       </div>
 
@@ -94,7 +94,7 @@
               class="fa fa-caret-down"></i></button>
           <div class="dropdown-content" style="width: 160px">
             <a routerLink="/setting/edit-profile"><i class="fas fa-edit"></i> แก้ไขบัญชี</a>
-            <a routerLink="/setting" [hidden]="privilege_id=='2'"><i class="fas fa-user-cog"></i> ตั้งค่าระบบ</a>
+            <a routerLink="/setting/admin-only" [hidden]="privilege_id=='2'"><i class="fas fa-user-cog"></i> ตั้งค่าระบบ</a>
             <a routerLink="/home" (click)="logout()"><i class="fas fa-sign-out-alt"></i> ออกจากระบบ</a>
           </div>
         </div>
