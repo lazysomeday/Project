@@ -41,6 +41,9 @@ import { NotificationT2Component } from './menu6/notification-t2/notification-t2
 import { NotificationT3Component } from './menu6/notification-t3/notification-t3.component';
 import { NotificationT4Component } from './menu6/notification-t4/notification-t4.component';
 import { HistoryAgingComponent } from './menu1/history-aging/history-aging.component';
+import { D1Type3Component } from './menu2/import-d1/d1-type3/d1-type3.component';
+import { D1Type4Component } from './menu2/import-d1/d1-type4/d1-type4.component';
+import { D1Type5Component } from './menu2/import-d1/d1-type5/d1-type5.component';
 
 const router: Routes = [
   /* เมนู 1 */
@@ -51,6 +54,9 @@ const router: Routes = [
   { path: 'menu2/import-d1', component: D1Type1Component },
   { path: 'menu2/d1-type1', component: D1Type1Component },
   { path: 'menu2/d1-type2', component: D1Type2Component },
+  { path: 'menu2/d1-type3', component: D1Type3Component },
+  { path: 'menu2/d1-type4', component: D1Type4Component },
+  { path: 'menu2/d1-type5', component: D1Type5Component },
   { path: 'menu2/import-d2', component: ImportD2Component },
   { path: 'menu2/d2-type1', component: D2Type1Component },
   { path: 'menu2/d2-type2', component: D2Type2Component },
